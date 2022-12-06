@@ -1,0 +1,372 @@
+﻿<style>
+    label {
+        float: left;
+        color: #1F497D;
+        font-weight: bold;
+    }
+
+    .spacer {
+        height: 80px;
+    }
+    nav.navbar.bootsnav {
+        background-color: #1F497D;
+    }
+    .header_text {
+        font-size: 19px;
+        margin: 25px 0px;
+        color: #fff!important;
+    }
+    nav.navbar.bootsnav ul.nav > li > a {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        padding: 35px 15px;
+        text-transform: uppercase;
+        color: #fff;
+    }
+        nav.navbar.bootsnav ul.nav > li > a:hover {
+            color: #fff!important;
+        }
+    nav.navbar.bootsnav ul.nav > li > a {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        padding: 15px 15px;
+        text-transform: uppercase;
+        border: 2px solid #fff;
+        color: #fff;
+        margin: 20px 10px;
+    }
+
+
+
+    /* card1S */
+
+    .card1s {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card1 {
+        margin: 20px;
+        padding: 20px;
+        width: 325px;
+        min-height: 160px;
+        display: grid;
+        /* grid-template-rows: 20px 50px 1fr 50px; */
+        border-radius: 10px;
+        box-shadow: 0px 6px 10px rgb(0 0 0 / 25%);
+        transition: all 0.2s;
+        justify-content: space-around;
+        align-content: center;
+        justify-items: stretch;
+        cursor: pointer;
+    }
+
+        .card1:hover {
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+            transform: scale(1.01);
+        }
+
+    .card1__link,
+    .card1__exit,
+    .card1__icon {
+        position: relative;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+        .card1__link::after {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            content: "";
+            width: 0%;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.6);
+            transition: all 0.5s;
+        }
+
+        .card1__link:hover::after {
+            width: 100%;
+        }
+
+    .card1__exit {
+        grid-row: 1/2;
+        justify-self: end;
+    }
+
+    .card1__icon {
+        grid-row: 2/3;
+        font-size: 30px;
+    }
+
+    .card1__title {
+        grid-row: 3/4;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .card1__apply {
+        grid-row: 4/5;
+        align-self: center;
+    }
+
+    /* card1 BACKGROUNDS */
+
+    .card1-1 {
+        background: radial-gradient(#1fe4f5, #3fbafe);
+    }
+
+    .card1-2 {
+        background: radial-gradient(#fbc1cc, #fa99b2);
+    }
+
+    .card1-3 {
+        background: radial-gradient(#76b2fe, #b69efe);
+    }
+
+    .card1-4 {
+        background: radial-gradient(#60efbc, #58d5c9);
+    }
+
+    .card1-5 {
+        background: radial-gradient(#f588d8, #c0a3e5);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1600px) {
+        .card1s {
+            justify-content: center;
+        }
+    }
+
+    .widgets-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .card-part1-logoPart, .logInarea {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        position: relative;
+    }
+
+    .card {
+        background: #fff;
+        min-height: 50px;
+        box-shadow: 0 0 0 1px #dce3ec, 0 8px 16px 0 #dce3ec;
+        position: relative;
+        margin-bottom: 20px;
+        transition: .5s;
+        border-radius: 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+        .card .body {
+            font-size: 14px;
+            color: #444;
+            padding: 15px;
+            font-weight: 400;
+        }
+
+    .grow {
+        transition: all 0.3s ease;
+    }
+
+        .grow:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+</style>
+<!-- Header
+============================================= -->
+<header id="home">
+
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-default navbar-sticky bootsnav">
+
+        <div class="container">
+
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/sbtet-logo.png" class="logo" alt="Logo">
+                </a>
+                <h6 class="header_text">Telangana Polytechnic Common Entrance Test</h6>
+            </div>
+            <!-- End Header Navigation -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+
+                    <li class="dropdown">
+                        <a href="#">Change Password</a>
+
+                    </li>
+
+                    <li><a ><i ng-click="Logout('index.OfficialsLogin')" class="user-login" aria-hidden="true"></i> Log Out</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+
+    </nav>
+    <!-- End Navigation -->
+
+</header>
+<!-- End Header -->
+<ui-view>
+    <div ng-controller="DashboardController">
+        <div class="sm-spacer"></div>
+        <div class="sm-spacer"></div>
+        <div class="container">
+            <!--<div class="col-lg-3 col-xs-6" ng-repeat="item in modulesList">
+                <a href="#" class="grow" ui-sref=".{{item.ModuleRouteName}}" ng-click="OpenModule(item)">
+                    <div class="{{item.ModuleImageClass}}">
+                        <div class="inner">
+                            <div class="icon" ng-show="item.ModuleRouteName=='Admission'">
+                                <img src="../../contents/img/admissionnew.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='AdmissionDashboard'">
+                                <img src="../../contents/img/admissionnew.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='Results'">
+                                <img src="../../contents/img/results.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='Assessment'">
+                                <img src="../../contents/img/Assess.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='Academic'">
+                                <img src="../../contents/img/Academics.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='Circulars'">
+                                <img src="../../contents/img/notification.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='PreExamination'">
+                                <img src="../../contents/img/PreExam.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='AdminServices'">
+                                <img src="../../contents/img/results.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='Settings'">
+                                <img src="../../contents/img/setting.png" width="60px" height="60px" />
+                            </div>
+                            <div class="icon" ng-show="item.ModuleRouteName=='TypeWriting'">
+                                <img src="../../contents/img/PreExam.png" width="60px" height="60px" />
+                            </div>
+                            <h3>{{item.SysModName}}</h3>
+                            <div class="icon1">
+                                <img src="../../contents/img/transprent.png" width="100" height="auto" />
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>-->
+            <div class="card1s">
+                <div class="card1 card1-1" ng-repeat="item in modulesList" ng-click="OpenModule(item)" ui-sref=".{{item.ModuleRouteName}}">
+
+                    <h4 class="card1__title">{{item.SysModName}}</h4>
+
+                </div>
+
+                <!--<div class="card1 card1-2" ui-sref="Dashboard.DistrictCordCentres">
+
+                    <h4 class="card1__title">District Coordinating Centers</h4>
+
+                </div>
+                <div class="card1 card1-3" ui-sref="Dashboard.DistrictCoordinators">
+
+                    <h4 class="card1__title">District Coordinators</h4>
+
+                </div>
+                <div class="card1 card1-4" ui-sref="Dashboard.Settings">
+
+                    <h4 class="card1__title">Settings</h4>
+
+                </div>-->
+                <!--<div class="card1 card1-3">
+        <div class="card1__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card1__exit"><i class="fas fa-times"></i></p>
+        <h4 class="card1__title">Ut enim ad minim veniam.</h4>
+        <p class="card1__apply">
+            <a class="card1__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+        </p>
+    </div>
+    <div class="card1 card1-4">
+        <div class="card1__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card1__exit"><i class="fas fa-times"></i></p>
+        <h4 class="card1__title">Quis nostrud exercitation ullamco laboris nisi.</h4>
+        <p class="card1__apply">
+            <a class="card1__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+        </p>
+    </div>
+    <div class="card1 card1-5">
+        <div class="card1__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card1__exit"><i class="fas fa-times"></i></p>
+        <h4 class="card1__title">Ut aliquip ex ea commodo consequat. Duis aute irure dolor.</h4>
+        <p class="card1__apply">
+            <a class="card1__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+        </p>
+    </div>
+    <div class="card1 card1-1">
+        <div class="card1__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card1__exit"><i class="fas fa-times"></i></p>
+        <h4 class="card1__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        <p class="card1__apply">
+            <a class="card1__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+        </p>
+    </div>-->
+                <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <div class="spacer"></div>
+       
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+    </div>
+   
+        </div>
+        </ui-view>
+
+<div class="sm-spacer"></div>
+<footer class="bg-dark text-light ng-scope">
+
+    <!-- Start Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-9">
+                        <p>© 2022 This is the official website of State Board of Technical Education &amp; Training, Telangana. All rights reserved </p>
+                    </div>
+                    <div class="col-md-3 text-right link">
+                        <span class="float-right">Total Site Views: </span>
+                        <span class="site-visit float-right ng-binding">47349</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Bottom -->
+</footer>

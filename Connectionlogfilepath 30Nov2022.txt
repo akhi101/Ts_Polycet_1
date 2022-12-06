@@ -1,0 +1,42 @@
+11/30/2022 12:02:00 AM
+Procedure or function 'SP_Update_DistrictCoordinators' expects parameter '@DistrictID', which was not supplied.
+
+11/30/2022 8:53:19 PM
+Procedure or function 'SP_Update_RecentNews' expects parameter '@RecentNewsText', which was not supplied.
+
+11/30/2022 8:55:31 PM
+Procedure or function 'SP_Update_RecentNews' expects parameter '@RecentNewsText', which was not supplied.
+
+11/30/2022 8:56:13 PM
+Procedure or function 'SP_Update_RecentNews' expects parameter '@RecentNewsText', which was not supplied.
+
+11/30/2022 8:58:17 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/30/2022 8:58:28 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/30/2022 8:58:28 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/30/2022 9:00:03 PM
+Procedure or function 'SP_Update_RecentNews' expects parameter '@RecentNewsText', which was not supplied.
+
+11/30/2022 9:02:00 PM
+Procedure or function 'SP_Update_RecentNews' expects parameter '@RecentNewsText', which was not supplied.
+
+11/30/2022 9:24:04 PM
+Procedure or function 'SP_Update_RecentNews' expects parameter '@RecentNewsText', which was not supplied.
+
+11/30/2022 9:24:05 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+11/30/2022 9:24:06 PM
+Procedure or function 'SP_Update_RecentNews' expects parameter '@RecentNewsText', which was not supplied.
+
+11/30/2022 9:24:07 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+11/30/2022 10:52:48 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+

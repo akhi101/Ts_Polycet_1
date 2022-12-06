@@ -1,0 +1,213 @@
+﻿<style>
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .input-group .form-control, .input-group-addon, .input-group-btn {
+        display: table-cell;
+    }
+    .card {
+        /* Add shadows to create the "card" effect */
+
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        transition: 0.3s;
+        padding: 20px;
+    }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+</style>
+<script type="text/javascript">
+    // When the document is ready
+    $(document).ready(function () {
+
+        $('#example1').datepicker({
+            minViewMode: 'years',
+            autoclose: true,
+            format: 'yyyy'
+        });
+        $('#example2').datepicker({
+            minViewMode: 1,
+            autoclose: true,
+            format: 'mm-yyyy'
+        });
+        $('.tabledate').datepicker({
+            //minViewMode: 1,
+            autoclose: true,
+            format: 'dd-mm-yyyy'
+        });
+        //$('#example4').datepicker({
+        //    //minViewMode: 1,
+        //    autoclose: true,
+        //    //format: 'dd-mm-yyyy'
+        //});
+    });
+</script>
+<div ng-controller="RecentNewsController">
+    <script type="text/javascript">
+        // When the document is ready
+        $(document).ready(function () {
+
+            $('#example1').datepicker({
+                minViewMode: 'years',
+                autoclose: true,
+                format: 'yyyy'
+            });
+            $('#example2').datepicker({
+                minViewMode: 1,
+                autoclose: true,
+                format: 'mm-yyyy'
+            });
+            $('.tabledate').datepicker({
+                //minViewMode: 1,
+                autoclose: true,
+                format: 'dd-mm-yyyy'
+            });
+            //$('#example4').datepicker({
+            //    //minViewMode: 1,
+            //    autoclose: true,
+            //    //format: 'dd-mm-yyyy'
+            //});
+        });
+    </script>
+    <div class="breadcrumb-header">
+        <!-- breadcrumb Open -->
+        <div class="container">
+            <section class="content-header">
+                <h5>Recent News</h5>
+
+            </section>
+        </div>
+        <!-- breadcrumb Close -->
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <button class="btn  btn-primary back_button" ng-click="GoBack()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>  Back</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <form name="dataForm">
+                <div class="row">
+                    <div class="form-group required col-md-12">
+                        <label>
+                            RecentNews Message:
+                        </label>
+                        <input class="form-control" type="text" placeholder="Enter RecentNews Message" ng-model="RecentNews" required />
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-4">
+
+                        <label for="date-picker-example">Start Date(dd/mm/yyyy):</label>
+                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker1" placeholder="Please Enter StartDate" autocomplete="off" name="StartDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="StartDate" is-open="showFlag1" required />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-primary" ng-click="showFlag1 = true"><i class="fa fa-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="date-picker-example">End Date(dd/mm/yyyy):</label>
+                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker2" placeholder="Please Enter EndDate" autocomplete="off" name="EndDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="EndDate" is-open="showFlag2" required />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-primary" ng-click="showFlag2 = true"><i class="fa fa-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="">
+                            <button type="submit" class="btn  btn-primary btn_top_margin  pull-left" ng-click="AddRecentNews()">Submit<span class="fa fa-arrow-up heading_icon btn_icons"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="sm-spacer"></div>
+        <div class="col-md-12" style="padding:0px!important">
+            <div class="cl-details" ng-if="RecentNewsTable.length>0">
+                <h5 class="head_css">Recent News</h5>
+            </div>
+        </div>
+        <div class="row">
+
+            <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="RecentNewsTable.length>0">
+                <table class="table table-bordered  table-striped table-rounded">
+                    <thead>
+                        <tr class="cb-1">
+                            <th class="" style="width: 2%;">S.No</th>
+                            <th class="text-center">Recent News</th>
+                            <th class="text-center">From Date</th>
+                            <th class="text-center">To Date</th>
+                            <th class="text-center">Active</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in RecentNewsTable">
+
+                            <td class="text-center">{{$index + 1}}</td>
+                            <td class="text-center">
+                                {{data.RecentNewsText}}
+                            </td>
+                            <td class="text-center">{{data.FromDate | date: "dd-MM-yyyy"}}</td>
+                            <td class="text-center">{{data.ToDate | date: "dd-MM-yyyy"}}</td>
+                            <td class="text-center">
+                                <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
+                                <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="btn btn-info btn-xs" ng-click="Edit(data.RecentNewsID)">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="" class="btn btn-primary btn-xs" ng-click="View(data.RecentNewsID)">
+                                    <i class="fa fa-eye" style="font-size:17px"></i>
+                                </a>
+                                <!--<a href="#" class="btn btn-danger btn-lg">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>-->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="width:100%;text-align:center;">
+                <!--<div class="loadingImg">
+                   <img src="../../contents/img/loading2.gif" ng-show="loading" width="64" />
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="sm-spacer"></div>
+    <div class="sm-spacer"></div>
+</div>

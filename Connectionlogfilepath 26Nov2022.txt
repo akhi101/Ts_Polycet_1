@@ -1,0 +1,111 @@
+11/26/2022 5:40:29 PM
+No mapping exists from object type Newtonsoft.Json.Linq.JArray to a known managed provider native type.
+
+11/26/2022 5:41:07 PM
+No mapping exists from object type Newtonsoft.Json.Linq.JArray to a known managed provider native type.
+
+11/26/2022 5:47:36 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:08:24 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:07 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:07 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:07 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:07 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+
+11/26/2022 6:10:08 PM
+Procedure or function 'SP_Get_Mandals' expects parameter '@DistrictID', which was not supplied.
+

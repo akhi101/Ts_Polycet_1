@@ -1,0 +1,54 @@
+12/3/2022 4:31:27 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/3/2022 4:32:36 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/3/2022 4:35:42 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/3/2022 4:38:44 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/3/2022 6:17:10 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/3/2022 6:17:10 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/3/2022 6:17:23 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/3/2022 6:17:23 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/3/2022 6:17:23 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/3/2022 6:17:23 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/3/2022 6:17:23 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/3/2022 6:40:37 PM
+Violation of UNIQUE KEY constraint 'UQ__PolycetY__7B07735626B26EB1'. Cannot insert duplicate key in object 'dbo.PolycetYears'. The duplicate key value is (2023).
+The statement has been terminated.
+
+12/3/2022 6:40:37 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/3/2022 6:41:47 PM
+Violation of UNIQUE KEY constraint 'UQ__PolycetY__7B07735626B26EB1'. Cannot insert duplicate key in object 'dbo.PolycetYears'. The duplicate key value is (2023).
+The statement has been terminated.
+
+12/3/2022 6:41:48 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/3/2022 6:52:33 PM
+Violation of UNIQUE KEY constraint 'UQ__PolycetY__7B07735626B26EB1'. Cannot insert duplicate key in object 'dbo.PolycetYears'. The duplicate key value is (2025).
+The statement has been terminated.
+
+12/3/2022 6:52:33 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
