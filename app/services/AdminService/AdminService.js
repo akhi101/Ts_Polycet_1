@@ -1,5 +1,9 @@
 ﻿define(['app'], function (app) {
     app.service("AdminService", function (DataAccessService) {
+        this.GetCurrentPolycetYear = function () {
+            return DataAccessService.getDataAll('api/AdminService/GetCurrentPolycetYear');
+        };
+
         this.GetStates = function () {
             return DataAccessService.getDataAll('api/AdminService/GetStates');
         };
@@ -51,10 +55,7 @@
             return DataAccessService.postData('api/AdminService/ValidateCaptcha', paramObject);
         };
 
-        this.GetCasteDetails = function (Applno, Aadhar_no) {
-            var paramObject = { "Applno": Applno, "Aadhar_no": Aadhar_no };
-            return DataAccessService.postData('api/AdminService/GetCasteDetails', paramObject);
-        };
+     
         
 
         this.GetDistricts = function (StateID) {
@@ -174,7 +175,12 @@
             return DataAccessService.postData('api/AdminService/UpdatePolycetYear', paramObject);
         };
 
-       
+        this.GetCasteDetails = function (applicationNo, userid) {
+            var paramObject = { "applicationNo": applicationNo, "userid": userid };
+            console.log(paramObject)
+            return DataAccessService.postData('api/AdminService/GetCasteDetails', paramObject);
+        };
+
 
     })
 })

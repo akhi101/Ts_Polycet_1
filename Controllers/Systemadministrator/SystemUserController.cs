@@ -180,6 +180,8 @@ namespace WebApplication1.Controllers
         public async Task<HttpResponseMessage> GetForgotPassword()
         {
 
+
+
             var data = await Request.Content.ReadAsStringAsync();
             var res = data.Split(new string[] { "$$@@$$" }, StringSplitOptions.None);
             var crypt = new HbCrypt(res[1]);
@@ -188,14 +190,15 @@ namespace WebApplication1.Controllers
             string mobile = crypt.AesDecrypt(res[0]);
             SystemUserBLL SystemUserBLL = new SystemUserBLL();
             SystemRes ForgetRes = new SystemRes();
-            var passcrypt = new HbCrypt();
             ForgetRes = SystemUserBLL.GetForgotPassword(RegistrationMobile);
             string retMsg = string.Empty;
             if (ForgetRes.ResponceCode == "200")
             {
                 try
                 {
-                    string decryptpassword = passcrypt.Decrypt(ForgetRes.RegistrationPassword);
+                    var passcrypt = new HbCrypt();
+                    string decryptpassword = passcrypt.AesDecrypt(ForgetRes.RegistrationPassword);
+                    //string decryptpassword = passcrypt.Decrypt(ForgetRes.RegistrationPassword);
                     string url = ConfigurationManager.AppSettings["SMS_API"].ToString();
                     //string smsusername = ConfigurationManager.AppSettings["SMS_Service_Username"].ToString();
                     //string smspassword = ConfigurationManager.AppSettings["SMS_Service_Password"].ToString();

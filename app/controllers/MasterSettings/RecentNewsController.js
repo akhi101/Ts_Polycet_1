@@ -80,20 +80,20 @@
         $scope.AddRecentNews = function () {
             //$scope.loading = true;
             var startDate = moment($scope.StartDate).format("YYYY-MM-DD");
-            var date = new Date($scope.EndDate.toString());
-            month = '' + (date.getMonth() + 1);
-            day = '' + date.getDate();
-            year = date.getFullYear();
+            //var date = new Date($scope.EndDate.toString());
+            //month = '' + (date.getMonth() + 1);
+            //day = '' + date.getDate();
+            //year = date.getFullYear();
 
-            hrs = '23';
-            min = '59';
-            sec = '59';
+            //hrs = '23';
+            //min = '59';
+            //sec = '59';
 
-            if (month.length < 2) month = '0' + month;
-            if (day.length < 2) day = '0' + day;
-            var dates = [year, month, day].join('-');
-            var time = [hrs, min, sec].join(':');
-            $scope.EndDate = dates + ' ' + time;
+            //if (month.length < 2) month = '0' + month;
+            //if (day.length < 2) day = '0' + day;
+            //var dates = [year, month, day].join('-');
+            //var time = [hrs, min, sec].join(':');
+            //$scope.EndDate = dates + ' ' + time;
             var EndDate = moment($scope.EndDate).format("YYYY-MM-DD");
             //$scope.array = []
    
@@ -103,7 +103,7 @@
                 "RecentNewsText": $scope.RecentNews,
                 "FromDate": startDate,
                 "ToDate": EndDate,
-                "Active": 1,
+                //"Active": 1,
                 "UserName": authData.UserName,
                 
             }

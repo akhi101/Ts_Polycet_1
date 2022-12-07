@@ -18,6 +18,8 @@ using System.Text;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 using System.Web;
+using System.Threading.Tasks;
+using System.Net.Http.Headers;
 
 namespace WebApplication1.Controllers
 {
@@ -25,6 +27,7 @@ namespace WebApplication1.Controllers
    
     public class AdminServiceController : ApiController
     {
+        public string RequestURI { get; private set; }
 
         [HttpGet, ActionName("GetUserTypes")]
         public HttpResponseMessage GetUserTypes()
@@ -102,12 +105,11 @@ namespace WebApplication1.Controllers
             var dbHandler = new PolycetdbHandler();
             try
             {
-                var param = new SqlParameter[5];
+                var param = new SqlParameter[4];
                 param[0] = new SqlParameter("@RecentNewsText", data.RecentNewsText);
                 param[1] = new SqlParameter("@FromDate", data.FromDate);
                 param[2] = new SqlParameter("@ToDate", data.ToDate);
-                param[3] = new SqlParameter("@Active", data.Active);
-                param[4] = new SqlParameter("@UserName", data.UserName);
+                param[3] = new SqlParameter("@UserName", data.UserName);
              
 
                 var dt = dbHandler.ReturnDataWithStoredProcedureTable("SP_Add_RecentNews", param);
@@ -164,17 +166,34 @@ namespace WebApplication1.Controllers
                 return ex.Message;
             }
         }
-        
-
-       
-
-      
-
-        
 
 
 
-   
+        [HttpGet, ActionName("GetCurrentPolycetYear")]
+        public string GetCurrentPolycetYear()
+        {
+            var dbHandler = new PolycetdbHandler();
+            try
+            {
+                string StrQuery = "";
+                StrQuery = "exec SP_Get_PolycetYear";
+                var res = dbHandler.ReturnDataSet(StrQuery);
+                return JsonConvert.SerializeObject(res);
+            }
+            catch (Exception ex)
+            {
+
+                PolycetdbHandler.SaveErorr("SP_Get_PolycetYear", 0, ex.Message);
+                throw ex;
+            }
+        }
+
+
+
+
+
+
+
 
 
 
@@ -882,6 +901,31 @@ namespace WebApplication1.Controllers
                 PolycetdbHandler.SaveErorr("SP_Update_PolycetYears", 0, ex.Message);
                 return ex.Message;
             }
+        }
+
+        [HttpPost, ActionName("GetCasteDetails")]
+        public async Task<HttpResponseMessage> GetCasteDetails([FromBody] CasteDetails ReqData)
+        {
+
+            var url = ConfigurationManager.AppSettings["MEESEVA_API"].ToString();
+            //var urlwithparam = url + "?applicationNo=" + ReqData.applicationNo + "&userid=" + ReqData.userid;
+            //using (HttpClient client = new HttpClient())
+
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = client.PostAsJsonAsync(RequestURI, ReqData).Result;
+            return response;
+
+        }
+
+
+
+        public class CasteDetails
+        {
+            public string applicationNo { get; set; }
+            public string userid { get; set; }
         }
 
     }

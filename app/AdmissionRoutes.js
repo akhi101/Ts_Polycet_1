@@ -23,7 +23,13 @@
             'index.Registration': {
                 url: "/Registration",
                 templateUrl: 'app/views/Register/Registration.html',
-                dependencies: ['controllers/Register/RegistrationController', 'services/StudentRegistration/StudentRegistrationService', 'services/AdminService/AdminService', 'services/BillDesk/paymentService','services/SystemAdministrator/SystemUserService']
+                dependencies: ['controllers/Register/RegistrationController', 'services/StudentRegistration/StudentRegistrationService', 'services/AdminService/AdminService', 'services/BillDesk/paymentService', 'services/SystemAdministrator/SystemUserService', 'services/PreExamination/PreExaminationService']
+            },
+
+            'index.PaymentResponse': {
+                url: "/PaymentResponse/:data",
+                templateUrl: 'app/views/PaymentResponse.html',
+                dependencies: ['controllers/PaymentResponseController', 'services/BillDesk/paymentService']
             },
 
             'index.Application': {
@@ -72,11 +78,6 @@
             },
 
 
-            'Dashboard.PolycetYears': {
-                url: "/PolycetYears",
-                templateUrl: 'app/views/PolycetYears.html',
-                dependencies: ['controllers/PolycetYearsController', 'services/AdminService/AdminService']
-            },
 
             'Dashboard.Settings': {
                 url: "/Settings",
@@ -96,11 +97,31 @@
                 dependencies: ['controllers/Circulars/CircularsController', 'services/AdminService/AdminService']
             },
 
-            'Dashboard.Settings.ModulesSetting': {
-                url: "/ModulesSetting",
+            'Dashboard.Settings.ModulesSettings': {
+                url: "/ModulesSettings",
                 templateUrl: 'app/views/MasterSettings/ModulesSetting.html',
                 dependencies: ['controllers/MasterSettings/ModulesSettingController', 'services/AdminService/AdminService', 'services/MasterSettings/MasterSettingsService']
 
+            },
+
+
+            'Dashboard.Settings.PolycetYears': {
+                url: "/PolycetYears",
+                templateUrl: 'app/views/MasterSettings/PolycetYears.html',
+                dependencies: ['controllers/MasterSettings/PolycetYearsController', 'services/AdminService/AdminService']
+            },
+
+
+            'Dashboard.Settings.FeeAmounts': {
+                url: "/FeeAmounts",
+                templateUrl: 'app/views/MasterSettings/FeeAmounts.html',
+                dependencies: ['controllers/MasterSettings/FeeAmountsController', 'services/AdminService/AdminService']
+            },
+
+            'Dashboard.Settings.DatesSettings': {
+                url: "/DatesSettings",
+                templateUrl: 'app/views/MasterSettings/DatesSettings.html',
+                dependencies: ['controllers/MasterSettings/DatesSettingsController', 'services/AdminService/AdminService']
             },
 
          

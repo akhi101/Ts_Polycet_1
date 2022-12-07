@@ -183,15 +183,18 @@
         $scope.Edit = function (ModuleID) {
             var geteditmodules = MasterSettingsService.GetEditModules(ModuleID);
             geteditmodules.then(function (response) {
+                //try {
+                //    var res = JSON.parse(response);
+                //    $scope.EditData = res.Table;
 
-                try {
-                    //var res = JSON.parse(response);
-                    $scope.EditData = response.Table[0];
-                    $scope.ModuleName = EditData.ModuleName;
-                } catch (err) {
-                }
+
+
+                //} catch (err) {
+                //}
+                $scope.EditData = response.Table[0];
+
             }, function (error) {
-                alert('Unable to load Modules')
+                alert('Unable to load Centres')
             });
 
 

@@ -239,7 +239,8 @@
         border-radius: 51% !important;
         /* height: 12px; */
         padding: 0px 17px !important;
-        border: 2px solid #ddd!important;
+        border: 2px solid #ddd !important;
+        outline-offset: -2px
     }
     .img_bill{
         height:60px;
@@ -255,6 +256,31 @@
         margin: 0;
         line-height: 1.42857143;
         font-weight: 600;
+    }
+    input {
+        border: 1px solid #e7e7e7;
+        border-radius: inherit;
+        box-shadow: inherit;
+        min-height: auto !important;
+    }
+    @supports (-webkit-appearance: none) or (-moz-appearance: none) <style> input[type=radio] {
+        margin: 4px 0 0;
+        margin-top: 1px\9;
+        line-height: normal;
+        position: absolute !important;
+        top: 2px;
+        right: 2px;
+        margin: 2px !important;
+        border-radius: 51% !important;
+        /* height: 12px; */
+        /* padding: 0px 17px !important; */
+        border: 2px solid #ddd !important;
+    }
+    @supports (-webkit-appearance: none) or (-moz-appearance: none) <style> i.fa.fa-check.checkmark {
+        color: #fff;
+        top: 14px;
+        font-size: 13px;
+        right: 12px;
     }
    </style>
 

@@ -160,7 +160,15 @@ namespace WebApplication1.Controllers
             var dbHandler = new PolycetdbHandler();
             try
             {
-                var param = new SqlParameter[9];
+                var res = data.RegistrationPassword.Split(new string[] { "$$@@$$" }, StringSplitOptions.None);
+                var crypt = new HbCrypt(res[1]);
+            
+                //long CellNo = Convert.ToInt64(crypt.AesDecrypt(res[1]));
+                string password = crypt.AesDecrypt(res[0]);
+               
+              
+
+                        var param = new SqlParameter[9];
                 param[0] = new SqlParameter("@StudentName", data.StudentName);
                 param[1] = new SqlParameter("@RegistrationMobile", data.RegistrationMobile);
                 param[2] = new SqlParameter("@CasteCategoryID", data.CasteCategoryID);
@@ -168,7 +176,7 @@ namespace WebApplication1.Controllers
                 param[4] = new SqlParameter("@CasteCertificateNumber", data.CasteCertificateNumber);
                 param[5] = new SqlParameter("@CasteVerified", data.CasteVerified);
                 param[6] = new SqlParameter("@RegistrationEmail", data.RegistrationEmail);
-                param[7] = new SqlParameter("@RegistrationPassword", data.RegistrationPassword);
+                param[7] = new SqlParameter("@RegistrationPassword", password);
                 param[8] = new SqlParameter("@RegistrationAmount", data.RegistrationAmount);
                 var dt = dbHandler.ReturnDataWithStoredProcedure("SP_Set_Registration", param);
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, dt);

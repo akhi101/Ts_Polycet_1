@@ -259,7 +259,9 @@
             };
             //$scope.UserID = 0;
             //$scope.ShowLoading = true;
+             //var reqdata = $crypto.encrypt($crypto.encrypt($scope.MobileNumber, 'HBSBP9214EDU00TS'), sessionStorage.Ekey) + '$$@@$$' + sessionStorage.Ekey;
             let reqdata = $crypto.encrypt($scope.MobileNumber, sessionStorage.Ekey) + "$$@@$$" + sessionStorage.Ekey;
+            //var reqdata = $crypto.encrypt($scope.Login.UserPassword, $scope.LoginEKey)
             var getPromise = ForgotPasswordService.GetForgotPassword(reqdata);
             getPromise.then(function (data) {
                 try {

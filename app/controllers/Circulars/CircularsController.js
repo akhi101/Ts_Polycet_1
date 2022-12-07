@@ -13,7 +13,7 @@
 
 
         $ctrl.$onInit = () => {
-            //$scope.getnotifications();
+            $scope.getnotifications();
          
          
 
