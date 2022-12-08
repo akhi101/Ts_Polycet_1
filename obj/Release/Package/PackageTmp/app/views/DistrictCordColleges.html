@@ -1,0 +1,152 @@
+﻿<style>
+    .card {
+        /* Add shadows to create the "card" effect */
+
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        transition: 0.3s;
+        padding: 20px;
+    }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+
+
+</style>
+
+<div ng-controller="DistrictCordCollegesController">
+    <div class="breadcrumb-header">
+        <!-- breadcrumb Open -->
+        <div class="container">
+            <section class="content-header">
+                <h5>Coordinating Colleges List</h5>
+
+            </section>
+        </div>
+        <!-- breadcrumb Close -->
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <button class="btn  btn-primary back_button"  ng-click="GoBack()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>  Back</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <form name="dataForm">
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <label>
+                            State:
+                        </label>
+                        <select class="form-control" id="State" ng-model="State" ng-change="GetDistricts(State)"
+                                ng-options="data.StateID as data.StateName for data in StatesData">
+                            <option value="" selected>Select State</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>
+                            District:
+                        </label>
+                        <select class="form-control" id="District" ng-model="District" ng-change="GetDistCoordinatingCenters(District)"
+                                ng-options="data.DistrictID as data.DistrictName for data in DistrictsData">
+                            <option value="" selected>Select District</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label>
+                            Centre Code:
+                        </label>
+                        <input class="form-control" type="text" placeholder="Enter Centre Code" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ng-model="CollegeCode" required />
+                    </div>
+                </div>
+                <div class="row">
+
+
+                    <div class="form-group col-md-4">
+                        <label>
+                            Centre Name:
+                        </label>
+                        <input class="form-control" type="text" placeholder="Enter Centre Name" ng-model="CollegeName" required />
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label>
+                            Centre Address:
+                        </label>
+                        <input class="form-control" type="text" rows="3" placeholder="Enter Centre Address" ng-model="CollegeAddress">
+                    </div>
+                    <div class="col-md-2">
+                        <div class="">
+                            <button type="submit" class="btn  btn-primary btn_top_margin  pull-left" ng-click="Submit(CollegeCode, CollegeName, CollegeAddress, State, District)">Submit<span class="fa fa-arrow-up heading_icon btn_icons"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="sm-spacer"></div>
+        <div class="col-md-12" style="padding:0px!important">
+            <div class="cl-details" ng-if="DistCordCentresTable.length>0">
+                <h5 class="head_css">Coordinating Colleges List</h5>
+            </div>
+        </div>
+        <div class="row">
+
+            <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="DistCordCentresTable.length>0">
+                <table class="table table-bordered  table-striped table-rounded">
+                    <thead>
+                        <tr class="cb-1">
+                            <th class="" style="width: 2%;">S.No</th>
+                            <th class="text-center">District</th>
+                            <th class="text-center">Centre Code</th>
+                            <th class="text-center">Centre Name</th>
+                            <th class="text-center">Active</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in DistCordCentresTable" ng-click="openDetails(x)">
+
+                            <td class="text-center">{{$index + 1}}</td>
+                            <td class="text-center">
+                                {{data.DistrictName}}
+                            </td>
+                            <td class="text-center">{{data.CentreCode}}</td>
+                            <td class="text-center">{{data.CentreName}}</td>
+                            <td class="text-center">
+                                <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
+                                <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="btn btn-info btn-xs" ng-click="Edit(data.CentreID)">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="" class="btn btn-primary btn-xs" ng-click="View(data.CentreID)">
+                                    <i class="fa fa-eye" style="font-size:17px"></i>
+                                </a>
+                                <!--<a href="#" class="btn btn-danger btn-lg">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>-->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="width:100%;text-align:center;">
+                <!--<div class="loadingImg">
+                   <img src="../../contents/img/loading2.gif" ng-show="loading" width="64" />
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="sm-spacer"></div>
+    <div class="sm-spacer"></div>
+</div>
