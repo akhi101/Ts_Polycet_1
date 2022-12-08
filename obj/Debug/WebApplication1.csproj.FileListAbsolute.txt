@@ -16,3 +16,22 @@ F:\TSPolycet1\TSPolycet1\TSPolycet1\obj\Debug\WebApplication1.csproj.CoreCompile
 F:\TSPolycet1\TSPolycet1\TSPolycet1\obj\Debug\WebApplication1.csproj.CopyComplete
 F:\TSPolycet1\TSPolycet1\TSPolycet1\obj\Debug\WebApplication1.dll
 F:\TSPolycet1\TSPolycet1\TSPolycet1\obj\Debug\WebApplication1.pdb
+E:\New folder\Ts_Polycet_1\bin\WebApplication1.dll.config
+E:\New folder\Ts_Polycet_1\bin\WebApplication1.dll
+E:\New folder\Ts_Polycet_1\bin\WebApplication1.pdb
+E:\New folder\Ts_Polycet_1\bin\System.Security.Cryptography.Encoding.dll
+E:\New folder\Ts_Polycet_1\bin\System.Security.Cryptography.Primitives.dll
+E:\New folder\Ts_Polycet_1\bin\MailKit.xml
+E:\New folder\Ts_Polycet_1\bin\MimeKit.pdb
+E:\New folder\Ts_Polycet_1\bin\MimeKit.xml
+E:\New folder\Ts_Polycet_1\bin\Newtonsoft.Json.xml
+E:\New folder\Ts_Polycet_1\bin\RestSharp.xml
+E:\New folder\Ts_Polycet_1\bin\System.Net.Http.Formatting.xml
+E:\New folder\Ts_Polycet_1\bin\System.Web.Http.xml
+E:\New folder\Ts_Polycet_1\bin\System.Web.Http.WebHost.xml
+E:\New folder\Ts_Polycet_1\bin\System.Web.Mvc.xml
+E:\New folder\Ts_Polycet_1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+E:\New folder\Ts_Polycet_1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+E:\New folder\Ts_Polycet_1\obj\Debug\WebApplication1.csproj.CopyComplete
+E:\New folder\Ts_Polycet_1\obj\Debug\WebApplication1.dll
+E:\New folder\Ts_Polycet_1\obj\Debug\WebApplication1.pdb
