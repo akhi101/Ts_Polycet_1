@@ -159,6 +159,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="app\AdmissionRoutes.js" />
     <Content Include="app\app.js" />
     <Content Include="app\controllers\ApplicationController.js" />
