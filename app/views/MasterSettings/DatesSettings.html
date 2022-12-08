@@ -1,4 +1,49 @@
 ﻿<style>
+
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+    .input-group .form-control, .input-group-addon, .input-group-btn {
+        display: table-cell;
+    }
+
+    .card {
+        /* Add shadows to create the "card" effect */
+
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        transition: 0.3s;
+        padding: 20px;
+    }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
     .selectBox {
         position: relative;
     }
@@ -151,6 +196,32 @@
     }
 </style>
 <div ng-controller="DatesSettingsController">
+    <script type="text/javascript">
+        // When the document is ready
+        $(document).ready(function () {
+
+            $('#example1').datepicker({
+                minViewMode: 'years',
+                autoclose: true,
+                format: 'yyyy'
+            });
+            $('#example2').datepicker({
+                minViewMode: 1,
+                autoclose: true,
+                format: 'mm-yyyy'
+            });
+            $('.tabledate').datepicker({
+                //minViewMode: 1,
+                autoclose: true,
+                format: 'dd-mm-yyyy'
+            });
+            //$('#example4').datepicker({
+            //    //minViewMode: 1,
+            //    autoclose: true,
+            //    //format: 'dd-mm-yyyy'
+            //});
+        });
+    </script>
     <div class="breadcrumb-header">
         <!-- breadcrumb Open -->
         <div class="container">
@@ -171,37 +242,62 @@
             <form name="dataForm">
                 <div class="row">
 
-                    <div class="col-md-4 form-group ">
+                    <div class="col-md-3 form-group ">
                         <label>
                             Polycet Year:
                         </label>
-                        <select class="form-control" id="State" ng-model="PolycetYearID" ng-change="GetDistricts(PolycetYear)"
+                        <select class="form-control" id="State" ng-model="PolycetYearID" ng-change="GetRegistrationDates(PolycetYearID)"
                                 ng-options="data.PolycetYearID as data.PolycetYear for data in CurrentPolycetYearData">
                             <option value="" selected>Select Polycet Year</option>
                         </select>
                     </div>
 
-                    <div class="col-md-4 form-group">
-                        <label class="font-weight-bold">Registration Start Date:</label> <input autocomplete="off" class="form-control" type="date" ng-model="RegistrationStartDate" placeholder="Select Registration Start Date">
+                    <div class="col-md-6 form-group">
+                        <label for="date-picker-example">Registration Start Date(dd/mm/yyyy):</label>
+                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker1" placeholder="Enter Registration Start Date" autocomplete="off" name="StartDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="RegStartDate" is-open="showFlag1" required  style=" margin-left: 0px; border-left-width: 0px; margin-top: 28px; margin-right: 0px; padding-right: 12px; padding-left: 12px; right: 240px; ">
+                            <span class="input-group-btn" style=" right: 240px; top: 14px;">
+                                <button type="button" class="btn btn-primary" ng-click="showFlag1 = true"><i class="fa fa-calendar"></i></button>
+                            </span>
+                        </p>
                     </div>
 
-                    <div class="col-md-4 form-group">
-                        <label class="font-weight-bold">Registration End Date:</label> <input autocomplete="off" class="form-control" type="date" ng-model="RegistrationEndDate" placeholder="Select Registration End Date">
+
+                    <div class="col-md-6 form-group">
+                        <label for="date-picker-example">Registration End Date:(dd/MM/yyyy):</label>
+                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker2" placeholder="Enter Registration End Date" autocomplete="off" name="EndDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="RegEndDate" is-open="showFlag2" required  style=" margin-left: 0px; border-left-width: 0px; margin-top: 28px; margin-right: 0px; padding-right: 12px; padding-left: 12px; right: 240px; ">
+                            <span class="input-group-btn" style=" right: 240px; top: 14px;">
+                                <button type="button" class="btn btn-primary" ng-click="showFlag2 = true"><i class="fa fa-calendar"></i></button>
+                            </span>
+                        </p>
                     </div>
 
-                    <div class="col-md-4 form-group">
-                        <label class="font-weight-bold">Application Start Date:</label> <input autocomplete="off" class="form-control" type="date" ng-model="ApplicationStartDate" placeholder="Select Application Start Date">
+                    <div class="col-md-6 form-group">
+                        <label for="date-picker-example">Application Start Date:(dd/MM/yyyy):</label>
+                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker3" placeholder="Enter Application Start Date" autocomplete="off" name="StartDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="AppStartDate" is-open="showFlag3" required  style=" margin-left: 0px; border-left-width: 0px; margin-top: 28px; margin-right: 0px; padding-right: 12px; padding-left: 12px; right: 240px; ">
+                            <span class="input-group-btn" style=" right: 240px; top: 14px;">
+                                <button type="button" class="btn btn-primary" ng-click="showFlag3 = true"><i class="fa fa-calendar"></i></button>
+                            </span>
+                        </p>
                     </div>
 
-                    <div class="col-md-4 form-group">
-                        <label class="font-weight-bold">Application End Date:</label> <input autocomplete="off" class="form-control" type="date" ng-model="ApplicationEndDate" placeholder="Select Application End Date">
-                    </div>
 
+                    <div class="col-md-6 form-group">
+                        <label for="date-picker-example">Application End Date:(dd/MM/yyyy):</label>
+                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker4" placeholder="Enter Application End Date" autocomplete="off" name="StartDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="AppEndDate" is-open="showFlag4" required  style=" margin-left: 0px; border-left-width: 0px; margin-top: 28px; margin-right: 0px; padding-right: 12px; padding-left: 12px; right: 240px; ">
+                            <span class="input-group-btn" style=" right: 240px; top: 14px;">
+                                <button type="button" class="btn btn-primary" ng-click="showFlag4 = true"><i class="fa fa-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
 
 
                     <div class="col-md-2">
                         <div class="">
-                            <button type="submit" class="btn  btn-primary btn_top_margin  pull-left" ng-click="SaveData()">Submit<span class="fa fa-arrow-up heading_icon btn_icons"></span></button>
+                            <button type="submit" class="btn  btn-primary btn_top_margin  pull-left" ng-click="Submit()">Submit<span class="fa fa-arrow-up heading_icon btn_icons"></span></button>
                         </div>
                     </div>
                 </div>
@@ -209,13 +305,13 @@
         </div>
         <div class="sm-spacer"></div>
         <div class="col-md-12" style="padding:0px!important">
-            <div class="cl-details">
+            <div class="cl-details" ng-if="RegistrationDatesData.length>0">
                 <h5 class="head_css">Dates List</h5>
             </div>
         </div>
         <div class="row">
 
-            <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12">
+            <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="RegistrationDatesData.length>0">
                 <table class="table table-bordered  table-striped table-rounded">
                     <thead>
                         <tr class="cb-1">
@@ -231,18 +327,18 @@
                     </thead>
 
                     <tbody>
-                        <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in Notifications">
+                        <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in RegistrationDatesData">
 
                             <td class="text-center">{{$index + 1}}</td>
                             <td class="text-center">
                                 {{data.PolycetYear}}
                             </td>
                             <td class="text-center">
-                                {{data.RegistrationStartDate | date:"dd-MMM-yyyy"}}
+                                {{data.RegistrationStartDate}}
                             </td>
-                            <td class="text-center">{{data.RegistrationEndDate | date:"dd-MMM-yyyy"}}</td>
-                            <td class="text-center">{{data.ApplicationStartDate | date:"dd-MMM-yyyy"}}</td>
-                            <td class="text-center">{{data.ApplicationEndDate | date:"dd-MMM-yyyy"}}</td>
+                            <td class="text-center">{{data.RegistrationEndDate}}</td>
+                            <td class="text-center">{{data.ApplicationStartDate}}</td>
+                            <td class="text-center">{{data.ApplicationEndDate}}</td>
 
                             <td class="text-center">
                                 <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
@@ -256,8 +352,8 @@
                                     <i class="fa fa-eye" style="font-size:17px"></i>
                                 </a>
                                 <!--<a href="#" class="btn btn-danger btn-lg">
-            <span class="glyphicon glyphicon-trash"></span>
-        </a>-->
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>-->
                             </td>
                         </tr>
 

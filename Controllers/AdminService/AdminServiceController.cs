@@ -89,12 +89,116 @@ namespace WebApplication1.Controllers
 
         //}
 
+
+        [HttpGet, ActionName("GetRegistrationDates")]
+        public string GetRegistrationDates(int PolycetYearID)
+        {
+            try
+            {
+                var dbHandler = new PolycetdbHandler();
+                var param = new SqlParameter[1];
+                param[0] = new SqlParameter("@PolycetYearID", PolycetYearID);
+
+                var dt = dbHandler.ReturnDataWithStoredProcedure("SP_Get_RegistrationDates", param);
+                return JsonConvert.SerializeObject(dt);
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        [HttpGet, ActionName("GetEditRegDates")]
+        public string GetEditRegDates(int PolycetYearID)
+        {
+            try
+            {
+                var dbHandler = new PolycetdbHandler();
+                var param = new SqlParameter[1];
+                param[0] = new SqlParameter("@PolycetYearID", PolycetYearID);
+
+                var dt = dbHandler.ReturnDataWithStoredProcedure("SP_Get_RegistrationDates", param);
+                return JsonConvert.SerializeObject(dt);
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        public class RegistrationDatesInfo
+        {
+            public int PolycetYearID { get; set; }
+            public string RegistrationStartDate { get; set; }
+            public string RegistrationEndDate { get; set; }
+            public string ApplicationStartDate { get; set; }
+            public string ApplicationEndDate { get; set; }
+            public string UserName { get; set; }
+        }
+
+        [HttpGet, ActionName("AddRegistrationDates")]
+        public string AddRegistrationDates(int PolycetYearID, string RegistrationStartDate, string RegistrationEndDate, string ApplicationStartDate, string ApplicationEndDate, string UserName)
+        {
+            var dbHandler = new PolycetdbHandler();
+
+            try
+            {
+                var param = new SqlParameter[6];
+                param[0] = new SqlParameter("@PolycetYearID", PolycetYearID);
+                param[1] = new SqlParameter("@RegistrationStartDate", RegistrationStartDate);
+                param[2] = new SqlParameter("@RegistrationEndDate", RegistrationEndDate);
+                param[3] = new SqlParameter("@ApplicationStartDate", ApplicationStartDate);
+                param[4] = new SqlParameter("@ApplicationEndDate", ApplicationEndDate);
+                param[5] = new SqlParameter("@UserName", UserName);
+
+
+                var dt = dbHandler.ReturnDataWithStoredProcedureTable("SP_Add_RegistrationDates", param);
+                return JsonConvert.SerializeObject(dt);
+            }
+            catch (Exception ex)
+            {
+
+                PolycetdbHandler.SaveErorr("SP_Add_RegistrationDates", 0, ex.Message);
+                return ex.Message;
+            }
+
+        }
+
+
+        [HttpGet, ActionName("UpdateRegistrationDates")]
+        public string UpdateRegistrationDates(int PolycetYearID, string RegistrationStartDate, string RegistrationEndDate, string ApplicationStartDate, string ApplicationEndDate,bool Active, string UserName)
+        {
+            var dbHandler = new PolycetdbHandler();
+
+            try
+            {
+                var param = new SqlParameter[7];
+                param[0] = new SqlParameter("@PolycetYearID", PolycetYearID);
+                param[1] = new SqlParameter("@RegistrationStartDate", RegistrationStartDate);
+                param[2] = new SqlParameter("@RegistrationEndDate", RegistrationEndDate);
+                param[3] = new SqlParameter("@ApplicationStartDate", ApplicationStartDate);
+                param[4] = new SqlParameter("@ApplicationEndDate", ApplicationEndDate);
+                param[5] = new SqlParameter("@Active", Active);
+                param[6] = new SqlParameter("@UserName", UserName);
+
+
+                var dt = dbHandler.ReturnDataWithStoredProcedureTable("SP_Update_RegistrationDates", param);
+                return JsonConvert.SerializeObject(dt);
+            }
+            catch (Exception ex)
+            {
+
+                PolycetdbHandler.SaveErorr("SP_Update_RegistrationDates", 0, ex.Message);
+                return ex.Message;
+            }
+
+        }
+
         public class RecentNewsInfo
         {
             public int RecentNewsID { get; set; }
             public string RecentNewsText { get; set; }
             public string FromDate { get; set; }
-            public string ToDate { get;set; }
+            public DateTime ToDate { get;set; }
             public bool Active { get; set; }
             public string UserName { get; set; }
         }
@@ -176,14 +280,14 @@ namespace WebApplication1.Controllers
             try
             {
                 string StrQuery = "";
-                StrQuery = "exec SP_Get_PolycetYear";
+                StrQuery = "exec SP_Get_CurrentPolycetYear";
                 var res = dbHandler.ReturnDataSet(StrQuery);
                 return JsonConvert.SerializeObject(res);
             }
             catch (Exception ex)
             {
 
-                PolycetdbHandler.SaveErorr("SP_Get_PolycetYear", 0, ex.Message);
+                PolycetdbHandler.SaveErorr("SP_Get_CurrentPolycetYear", 0, ex.Message);
                 throw ex;
             }
         }

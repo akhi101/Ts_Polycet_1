@@ -31,3 +31,270 @@ Procedure or function SP_Add_RecentNews has too many arguments specified.
 12/7/2022 1:38:37 PM
 Could not find stored procedure 'USP_SET_ErrorLog'.
 
+12/7/2022 4:42:40 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:40 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:40 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:40 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:40 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:40 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:41 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:41 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 4:42:41 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:41 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 4:42:41 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:41 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 4:42:41 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 4:42:41 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 6:01:38 PM
+Procedure or function 'SP_Add_RegistrationDates' expects parameter '@PolycetYearID', which was not supplied.
+
+12/7/2022 6:01:39 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 6:03:30 PM
+Procedure or function 'SP_Add_RegistrationDates' expects parameter '@PolycetYearID', which was not supplied.
+
+12/7/2022 6:03:30 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 6:07:57 PM
+Procedure or function 'SP_Add_RegistrationDates' expects parameter '@PolycetYearID', which was not supplied.
+
+12/7/2022 6:07:58 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 6:15:09 PM
+Procedure or function 'SP_Add_RegistrationDates' expects parameter '@PolycetYearID', which was not supplied.
+
+12/7/2022 6:15:09 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 6:29:13 PM
+Procedure or function 'SP_Add_RegistrationDates' expects parameter '@PolycetYearID', which was not supplied.
+
+12/7/2022 6:29:13 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 6:40:29 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 6:40:29 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 6:42:05 PM
+No mapping exists from object type RestSharp.DateFormat to a known managed provider native type.
+
+12/7/2022 6:42:06 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 6:43:18 PM
+SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+
+12/7/2022 6:43:18 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 7:40:50 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 7:40:50 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 7:41:01 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 7:41:01 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 7:41:01 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 7:41:03 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 7:41:03 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 7:41:03 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 7:41:03 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 7:41:03 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 7:41:03 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 7:41:03 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 7:41:04 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 7:41:04 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 8:00:46 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 8:16:52 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 8:16:53 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 8:16:53 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 8:16:54 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 8:17:04 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 8:17:04 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 8:17:04 PM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/7/2022 8:23:51 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/7/2022 9:01:30 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 9:01:46 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 9:02:28 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 10:28:09 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 10:28:10 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 10:30:22 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 10:30:22 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 10:33:22 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 10:33:22 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 10:35:44 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 10:35:44 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 10:38:00 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 10:38:00 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 10:53:35 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 10:53:35 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 10:55:50 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 10:55:50 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 11:00:34 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 11:00:34 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 11:02:54 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 11:02:54 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/7/2022 11:08:53 PM
+Error converting data type nvarchar to date.
+
+12/7/2022 11:08:53 PM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+

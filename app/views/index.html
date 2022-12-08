@@ -120,6 +120,39 @@
         .spacer {
             height: 50px;
         }
+
+        .test-scroll a {
+            font-weight: 600;
+/*            color: #ff6600;
+*/            text-decoration: none;
+            font-size: 14px;
+            margin-right: 20px;
+        }
+
+        .test-scroll {
+            float: left;
+            width: 90%;
+            padding: 10px 0px 0px 0px;
+        }
+
+            .test-scroll p {
+                margin: 0px;
+            }
+
+            .test-scroll a {
+                font-weight: 600;
+/*                color: #ff6600;
+*/               text-decoration: none;
+                font-size: 14px;
+                margin-right: 20px;
+            }
+
+        .l-news {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+            float: left;
+        }
     </style>
     <!--<style>
         /* width */
@@ -254,133 +287,127 @@
                 <div class="container">
 
                     <div class="content-box">
-                        <div class="test-scroll">
-                            <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="10">
-                                <!--<p class="corousel_pad">
+                        <div class="l-news">
+                            <div class="test-scroll">
+                                <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="10">
 
+                                    <p>
+                                        <a ng-repeat="data in LatestRecentNews" ng-bind-html-unsafe="data.RecentNewsText">
+                                            <img class="gifImg" height="40" width="40" src="../../contents/img/gif.gif" /> <b style="letter-spacing:1px;">{{data.RecentNewsText}}</b>
+                                        </a>
+                                    </p>
 
-        <a href="#">
-            <img class="gifImg" height="25" width="40" src="./assets/img/new-img.gif">{{}}
-
-        </a>
-    </p><a href="#">-->
-                                <!--</a>-->
-                                <ul>
-                                    <li ng-repeat="data in LatestRecentNews" style="list-style-type: none;" ng-bind-html-unsafe="data.RecentNewsText">
-                                        <img class="gifImg" height="40" width="40" src="../../contents/img/gif.gif" /> <b style="letter-spacing:1px;">{{data.RecentNewsText}}</b>
-                                    </li>
-                                </ul>
-
-                            </marquee>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-md-5 info text-light">
-                                <h2>POLYCET</h2>
-                                <p style="padding-left:0px">
-                                    The State Board of Technical Education and Training (SBTET), Telangana, Hyderabad will
-                                    conduct “Polytechnic Common Entrance Test (POLYCET)” for the candidates seeking admission in to all Diploma
-                                    Courses in Engineering / Non Engineering / Technology offered at Polytechnics / Institutions (including Aided and
-                                    Unaided Private Polytechnics / Institutions running in Private Engineering Colleges) in Telangana State and Diploma in
-                                    Agriculture, Agriculture Engineering, Seed Technology & Organic Agriculture Courses offered by Professor Jay Shankar Telangana
-                                    State Agricultural University (PJTSAU), Diploma Courses offered by Sri Konda Laxman Telangana State Horticulture University
-                                    (SKLTSHU).
-                                </p>
-                            </div>
-
-                            <div class="col-md-7 categories">
-                                <div class="row">
-                                    <!-- Single Item -->
-                                    <div class="col-md-4 col-sm-4 single-item">
-                                        <div class="item">
-                                            <a ui-sref="index.Registration">
-                                                <img class="icon_css" src="./assets/img/register.png">
-                                                <div class="info" ui-sref="index.Registration">
-                                                    <h5>Registration</h5>
-                                                    <span>Step 1</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                    <!-- Single Item -->
-                                    <div class="col-md-4 col-sm-4 single-item">
-                                        <div class="item">
-                                            <a href="#">
-                                                <!-- <i class="flaticon-interaction"></i> -->
-                                                <img class="icon_css" src="./assets/img/application.png">
-                                                <div class="info">
-                                                    <h5>Fill Application</h5>
-                                                    <span>Step 2</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                    <!-- Single Item -->
-                                    <div class="col-md-4 col-sm-4 single-item">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img class="icon_css" src="./assets/img/payment.png">
-                                                <!-- <i class="flaticon-conveyor"></i> -->
-                                                <div class="info">
-                                                    <h5>Fee Payment</h5>
-                                                    <span>Step 3</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                </div>
-                                <div class="row">
-                                    <!-- Single Item -->
-                                    <div class="col-md-4 col-sm-4 single-item">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img class="icon_css" src="./assets/img/application_status.png">
-                                                <!-- <i class="flaticon-feature"></i> -->
-                                                <div class="info">
-                                                    <h5>Application Status</h5>
-                                                    <span>Step 4</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                    <!-- Single Item -->
-                                    <div class="col-md-4 col-sm-4 single-item">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img class="icon_css" src="./assets/img/printer.png">
-                                                <!-- <i class="flaticon-interaction"></i> -->
-                                                <div class="info">
-                                                    <h5>Print Application</h5>
-                                                    <span>Step 5</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
-                                    <!-- Single Item -->
-                                    <div class="col-md-4 col-sm-4 single-item">
-                                        <div class="item">
-                                            <a href="#">
-                                                <img class="icon_css" src="./assets/img/evaluation.png">
-                                                <!-- <i class="flaticon-conveyor"></i> -->
-                                                <div class="info">
-                                                    <h5>Hallticket </h5>
-                                                    <span>Step 6</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Item -->
+                                </marquee>
                                 </div>
                             </div>
+                            <div class="row">
 
+                                <div class="col-md-5 info text-light">
+                                    <h2>POLYCET</h2>
+                                    <p style="padding-left:0px">
+                                        The State Board of Technical Education and Training (SBTET), Telangana, Hyderabad will
+                                        conduct “Polytechnic Common Entrance Test (POLYCET)” for the candidates seeking admission in to all Diploma
+                                        Courses in Engineering / Non Engineering / Technology offered at Polytechnics / Institutions (including Aided and
+                                        Unaided Private Polytechnics / Institutions running in Private Engineering Colleges) in Telangana State and Diploma in
+                                        Agriculture, Agriculture Engineering, Seed Technology & Organic Agriculture Courses offered by Professor Jay Shankar Telangana
+                                        State Agricultural University (PJTSAU), Diploma Courses offered by Sri Konda Laxman Telangana State Horticulture University
+                                        (SKLTSHU).
+                                    </p>
+                                </div>
+
+                                <div class="col-md-7 categories">
+                                    <div class="row">
+                                        <!-- Single Item -->
+                                        <div class="col-md-4 col-sm-4 single-item">
+                                            <div class="item">
+                                                <a ui-sref="index.Registration">
+                                                    <img class="icon_css" src="./assets/img/register.png">
+                                                    <div class="info" ui-sref="index.Registration">
+                                                        <h5>Registration</h5>
+                                                        <span>Step 1</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Item -->
+                                        <!-- Single Item -->
+                                        <div class="col-md-4 col-sm-4 single-item">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <!-- <i class="flaticon-interaction"></i> -->
+                                                    <img class="icon_css" src="./assets/img/application.png">
+                                                    <div class="info">
+                                                        <h5>Fill Application</h5>
+                                                        <span>Step 2</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Item -->
+                                        <!-- Single Item -->
+                                        <div class="col-md-4 col-sm-4 single-item">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img class="icon_css" src="./assets/img/payment.png">
+                                                    <!-- <i class="flaticon-conveyor"></i> -->
+                                                    <div class="info">
+                                                        <h5>Fee Payment</h5>
+                                                        <span>Step 3</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Item -->
+                                    </div>
+                                    <div class="row">
+                                        <!-- Single Item -->
+                                        <div class="col-md-4 col-sm-4 single-item">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img class="icon_css" src="./assets/img/application_status.png">
+                                                    <!-- <i class="flaticon-feature"></i> -->
+                                                    <div class="info">
+                                                        <h5>Application Status</h5>
+                                                        <span>Step 4</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Item -->
+                                        <!-- Single Item -->
+                                        <div class="col-md-4 col-sm-4 single-item">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img class="icon_css" src="./assets/img/printer.png">
+                                                    <!-- <i class="flaticon-interaction"></i> -->
+                                                    <div class="info">
+                                                        <h5>Print Application</h5>
+                                                        <span>Step 5</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Item -->
+                                        <!-- Single Item -->
+                                        <div class="col-md-4 col-sm-4 single-item">
+                                            <div class="item">
+                                                <a href="#">
+                                                    <img class="icon_css" src="./assets/img/evaluation.png">
+                                                    <!-- <i class="flaticon-conveyor"></i> -->
+                                                    <div class="info">
+                                                        <h5>Hallticket </h5>
+                                                        <span>Step 6</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Item -->
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
             <!-- End What Learn -->
             <!-- Start Top Category & Trending Courses

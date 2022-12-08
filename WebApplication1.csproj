@@ -213,11 +213,13 @@
     <Content Include="app\views\Popups\EditModulesPopup.html" />
     <Content Include="app\views\Popups\EditPolycetYearPopup.html" />
     <Content Include="app\views\Popups\EditRecentNewsPopup.html" />
+    <Content Include="app\views\Popups\EditRegDatesPopup.html" />
     <Content Include="app\views\Popups\FeePaymentPopup.html" />
     <Content Include="app\views\Popups\ViewDistCentresPopup.html" />
     <Content Include="app\views\Popups\ViewDistCoordinatorsPopup.html" />
     <Content Include="app\views\Popups\ViewPolycetYearPopup.html" />
     <Content Include="app\views\Popups\ViewRecentNewsPopup.html" />
+    <Content Include="app\views\Popups\ViewRegDatesPopup.html" />
     <Content Include="app\views\Register\Registration.html" />
     <Content Include="assets\cont\css\fontello.css" />
     <Content Include="assets\cont\font\fontello.svg" />

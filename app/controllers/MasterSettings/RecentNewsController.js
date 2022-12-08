@@ -78,8 +78,20 @@
 
 
         $scope.AddRecentNews = function () {
-            //$scope.loading = true;
-            var startDate = moment($scope.StartDate).format("YYYY-MM-DD");
+            if ($scope.StartDate == null || $scope.StartDate == undefined || $scope.StartDate == "") {
+                alert('Please select StartDate');
+                return;
+            }
+            if ($scope.EndDate == null || $scope.EndDate == undefined || $scope.EndDate == "") {
+                alert('Please select EndDate');
+                return;
+            }
+            if ($scope.RecentNews == null || $scope.RecentNews == undefined || $scope.RecentNews == "") {
+                alert('Please enter RecentNews');
+                return;
+            }
+            $scope.loading = true;
+            var startDate = moment($scope.StartDate).format("YYYY-MM-DD HH:mm:ss.SSS");
             //var date = new Date($scope.EndDate.toString());
             //month = '' + (date.getMonth() + 1);
             //day = '' + date.getDate();
@@ -94,34 +106,30 @@
             //var dates = [year, month, day].join('-');
             //var time = [hrs, min, sec].join(':');
             //$scope.EndDate = dates + ' ' + time;
-            var EndDate = moment($scope.EndDate).format("YYYY-MM-DD");
-            //$scope.array = []
-   
-            //$scope.array.push({ 'RecentNewsText': $scope.RecentNews, 'FromDate': startDate, 'ToDate': EndDate,'Active':1, 'UserName': $scope.UserName });
+            var EndDate = moment($scope.EndDate).format("YYYY-MM-DD HH:mm:ss.SSS");
+            //if ($scope.arr.length > 0) {
+            //    for (var i = 0; i < $scope.arr.length; i++) {
+            //        $scope.array.push({ 'RecentNewsText': $scope.RecentNews, 'FromDate': startDate, 'ToDate': EndDate, 'UserName': $scope.UserName });
+            //    }
+            //}
 
-            var paramObj = {
-                "RecentNewsText": $scope.RecentNews,
-                "FromDate": startDate,
-                "ToDate": EndDate,
-                //"Active": 1,
-                "UserName": authData.UserName,
-                
-            }
+            $scope.array = []
 
+            $scope.array.push({ 'RecentNewsText': $scope.RecentNews, 'FromDate': startDate, 'ToDate': EndDate, 'UserName': $scope.UserName });
 
-            var addrecentnews = AdminService.AddRecentNews(paramObj);
+            var addrecentnews = AdminService.AddRecentNews($scope.array[0].RecentNewsText, $scope.array[0].FromDate, $scope.array[0].ToDate, $scope.array[0].UserName);
             addrecentnews.then(function (response) {
-                try {
-                    var res = JSON.parse(response);
-                }
-                catch (err) { }
+                //try {
+                //    var res = JSON.parse(response);
+                //}
+                //catch (err) { }
 
-                if (res[0].ResponceCode == '200') {
+                if (response[0].ResponceCode == '200') {
                     alert('RecentNews Added Successfully');
                     $scope.getuserRecentNews();
 
-                } else if (res[0].ResponceCode == '400') {
-                    alert(res[0].ResponceDescription);
+                } else if (response[0].ResponceCode == '400') {
+                    alert(respose[0].ResponceDescription);
                     $scope.getuserRecentNews();
                 }
             },
