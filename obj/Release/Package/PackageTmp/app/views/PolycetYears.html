@@ -1,0 +1,156 @@
+﻿<style>
+    .card {
+        /* Add shadows to create the "card" effect */
+
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        transition: 0.3s;
+        padding: 20px;
+    }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+</style>
+
+<div ng-controller="PolycetYearsController">
+    <script type="text/javascript">
+        // When the document is ready
+        $(document).ready(function () {
+
+            $('#example1').datepicker({
+                minViewMode: 'years',
+                autoclose: true,
+                format: 'yyyy'
+            });
+            $('#example2').datepicker({
+                minViewMode: 1,
+                autoclose: true,
+                format: 'mm-yyyy'
+            });
+            $('.tabledate').datepicker({
+                //minViewMode: 1,
+                autoclose: true,
+                format: 'dd-mm-yyyy'
+            });
+            //$('#example4').datepicker({
+            //    //minViewMode: 1,
+            //    autoclose: true,
+            //    //format: 'dd-mm-yyyy'
+            //});
+        });
+    </script>
+    <div class="breadcrumb-header">
+        <!-- breadcrumb Open -->
+        <div class="container">
+            <section class="content-header">
+                <h5>Polycet Year</h5>
+
+            </section>
+        </div>
+        <!-- breadcrumb Close -->
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <button class="btn  btn-primary back_button" ng-click="GoBack()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>  Back</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <form name="dataForm">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label class="font-weight-bold"> Start of Polycet Year :</label> <input autocomplete="off" class="form-control" type="text" ng-model="PolycetYear" placeholder="Select Polycet Year" id="example1">
+                    </div>
+
+                    <div class="col-md-3 form-group">
+                        <label class="font-weight-bold"> Current AcademicYear:</label>
+                        <select class="form-control " ng-model="CurrentPolycetYear" name="StudentType" required>
+                            <option value="" selected="selected">Select</option>
+                            <option value=true>Yes</option>
+                            <option value=false>No</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+
+
+                   
+                    <div class="col-md-2">
+                        <div class="">
+                            <button type="submit" class="btn  btn-primary btn_top_margin  pull-left" ng-click="Submit()">Submit<span class="fa fa-arrow-up heading_icon btn_icons"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="sm-spacer"></div>
+        <div class="col-md-12" style="padding:0px!important">
+            <div class="cl-details" ng-if="PolycetYears.length>0">
+                <h5 class="head_css">PolycetYears List</h5>
+            </div>
+        </div>
+        <div class="row">
+
+            <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="PolycetYears.length>0">
+                <table class="table table-bordered  table-striped table-rounded">
+                    <thead>
+                        <tr class="cb-1">
+                            <th class="" style="width: 2%;">S.No</th>
+                            <th class="text-center">Polycet Year</th>
+                            <th class="text-center">Current Polycet Year</th>
+                            <th class="text-center">Active Status</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in PolycetYears">
+
+                            <td class="text-center">{{$index + 1}}</td>
+                            <td class="text-center">
+                                {{data.PolycetYear}}
+                            </td>
+                            <td style="text-align:center">
+                                <div class="form-check">
+                                    <input ng-model="data.CurrentPolycetYear"  ng-disabled="edit" id="checkbox" type="checkbox" />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
+                                <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="btn btn-info btn-xs" ng-click="Edit(data.PolycetYearID)">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a href="" class="btn btn-primary btn-xs" ng-click="View(data.PolycetYearID)">
+                                    <i class="fa fa-eye" style="font-size:17px"></i>
+                                </a>
+                                <!--<a href="#" class="btn btn-danger btn-lg">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>-->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="width:100%;text-align:center;">
+                <!--<div class="loadingImg">
+                   <img src="../../contents/img/loading2.gif" ng-show="loading" width="64" />
+                </div>-->
+
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="sm-spacer"></div>
+    <div class="sm-spacer"></div>
+</div>

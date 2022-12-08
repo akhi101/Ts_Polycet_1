@@ -1,0 +1,541 @@
+﻿<style>
+    .card {
+        /* Add shadows to create the "card" effect */
+
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        transition: 0.3s;
+        padding: 20px;
+    }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+
+    .table-custom-tables-tb .table-bordered .table-hover > tbody > tr > td {
+        border: 1px solid #ddd !important;
+        color: #337ab7;
+        font-size: 14px !important;
+        cursor: default !important;
+        font-family: 'Open Sans';
+    }
+
+    .tableinpt {
+        width: 100%;
+        box-shadow: none;
+        border: 0;
+        pointer-events: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+    }
+
+    .table-custom-tables-tb .table-bordered .table-hover > tbody > tr > td {
+        border: 1px solid #ddd !important;
+        color: #337ab7;
+        font-size: 14px !important;
+        cursor: default !important;
+        font-family: 'Open Sans';
+    }
+</style>
+
+<div ng-controller="ModulesSettingController">
+    <div class="breadcrumb-header">
+        <!-- breadcrumb Open -->
+        <div class="container">
+            <section class="content-header">
+                <h5>Modules Setting</h5>
+
+            </section>
+        </div>
+        <!-- breadcrumb Close -->
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <button class="btn  btn-primary back_button" ng-click="GoBack()"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>  Back</button>
+        </div>
+    </div>
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#1" data-toggle="tab" ng-click="tab1()">Add Module</a>
+            </li>
+            <li>
+                <a href="#2" data-toggle="tab" ng-click="tab2()">Add User Module</a>
+            </li>
+            <li>
+                <a href="#3" data-toggle="tab" ng-click="tab3()">Add SubModule</a>
+            </li>
+            <li>
+                <a href="#4" data-toggle="tab" ng-click="tab4()">Add User SubModule</a>
+            </li>
+
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="1">
+                <div class="card">
+                    <form name="dataForm">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"> Card Name :</label>
+                                    <input type="text" placeholder="Enter Module Name" class="form-control" ng-model="CardName" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    <label class="font-weight-bold"> Card Colour :</label>
+                                    <select class="form-control " ng-model="CardColour" name="CardColour" ng-change="changeColour(ModuleCardColourID)" required>
+                                        <option value="" selected="selected">Select Colour</option>
+                                        <option value="{{data.ModuleCardColourID}}" ng-repeat="data in ModuleCardColours" class="">
+                                            {{data.ModuleCardColourName}}
+
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"> Card Route Name :</label>
+                                    <input type="text" placeholder="Enter Module Route Name" class="form-control" ng-model="CardRoute" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <button class="btn btn-sm btn-primary gr-button btn_top pull-left" style="margin-top: 23px!important;" ng-click="AddModule()">
+                                        Save
+                                        <span class="fa fa-arrow-down heading_icon btn_icons"></span>
+
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="sm-spacer"></div>
+                <div class="col-md-12" style="padding:0px!important">
+                    <div class="cl-details" ng-if="ModulesTableData.length>0">
+                        <h5 class="head_css">Modules List</h5>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="ModulesTableData.length>0">
+                        <table class="table table-bordered  table-striped table-rounded">
+                            <thead>
+                                <tr class="cb-1">
+                                    <th class="" style="width: 2%;">S.No</th>
+                                    <th class="text-center">Module Name</th>
+                                    <th class="text-center">Module Route Name</th>
+                                    <th class="text-center">Colour</th>
+                                    <th class="text-center">Module Order</th>
+                                    <th class="" style="">Active Status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in ModulesTableData" ng-click="openDetails(x)">
+
+                                    <td class="text-center">{{$index + 1}}</td>
+                                    <td class="text-center">
+                                        {{data.ModuleName}}
+                                    </td>
+                                    <td class="text-center">{{data.ModuleRouteName}}</td>
+                                    <td class="text-center">{{data.ModuleCardColourName}}</td>
+                                    <td class="text-center">{{data.ModuleOrder}}</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
+                                        <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-info btn-xs" ng-click="Edit(data.ModuleID)">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-xs" ng-click="View(data.ModuleID)">
+                                            <i class="fa fa-eye" style="font-size:17px"></i>
+                                        </a>
+                                        <!--<a href="#" class="btn btn-danger btn-lg">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="width:100%;text-align:center;">
+                        <!--<div class="loadingImg">
+                   <img src="../../contents/img/loading2.gif" ng-show="loading" width="64" />
+                </div>-->
+
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+                <div class="sm-spacer"></div>
+                <div class="sm-spacer"></div>
+            </div>
+
+            <div class="tab-pane" id="2">
+                <div class="card">
+                    <form name="dataForm">
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"> User Type :</label>
+                                    <select class="form-control " ng-model="UserType" name="UserType" ng-change="getUserModules(UserType)" required>
+                                        <option value="" selected="selected">Select User</option>
+                                        <option value="{{data.UserTypeID}}" ng-repeat="data in UserTypes" class="">
+                                            {{data.UserType}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    <label class="font-weight-bold"> Module :</label>
+                                    <select class="form-control " ng-model="ModuleID" name="ModuleID" required>
+                                        <option value="" selected="selected">Select Module</option>
+                                        <option value="{{data.ModuleID}}" ng-hide="" ng-repeat="data in ModulesTableData" class="">
+                                            {{data.ModuleName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <button class="btn btn-sm btn-primary gr-button btn_top pull-left" style="margin-top: 23px!important;" ng-click="AddUserModule()">
+                                        Save
+                                        <span class="fa fa-arrow-down heading_icon btn_icons"></span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sm-spacer"></div>
+                <div class="col-md-12" style="padding:0px!important">
+                    <div class="cl-details" ng-if="UserModulesDataTable.length>0">
+                        <h5 class="head_css">User Modules</h5>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="UserModulesDataTable.length>0">
+                        <table class="table table-bordered  table-striped table-rounded">
+                            <thead>
+                                <tr class="cb-1">
+                                    <th class="" style="width: 2%;">S.No</th>
+                                    <th class="text-center">Role</th>
+                                    <th class="text-center">Module Name</th>
+                                    <th class="text-center">Module Route Name</th>
+                                    <th class="text-center">ModuleCardColour</th>
+                                    <th class="text-center">Active</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in UserModulesDataTable" ng-click="openDetails(x)">
+
+                                    <td class="text-center">{{$index + 1}}</td>
+                                    <td class="text-center">
+                                        {{data.Role}}
+                                    </td>
+                                    <td class="text-center">{{data.ModuleName}}</td>
+                                    <td class="text-center">{{data.ModuleRouteName}}</td>
+                                    <td class="text-center">{{data.ModuleCardColourName}}</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
+                                        <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-info btn-xs" ng-click="Edit(data.CentreID)">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-xs" ng-click="View(data.CentreID)">
+                                            <i class="fa fa-eye" style="font-size:17px"></i>
+                                        </a>
+                                        <!--<a href="#" class="btn btn-danger btn-lg">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="width:100%;text-align:center;">
+                        <!--<div class="loadingImg">
+                   <img src="../../contents/img/loading2.gif" ng-show="loading" width="64" />
+                </div>-->
+
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+                <div class="sm-spacer"></div>
+                <div class="sm-spacer"></div>
+            </div>
+
+            <div class="tab-pane" id="3">
+                <div class="card">
+                    <form name="dataForm">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    <label class="font-weight-bold"> Module :</label>
+                                    <select class="form-control " ng-model="moduleid" id="moduleid" ng-change="getSubModules(moduleid)" required>
+                                        <option value="" selected="selected">Select Module</option>
+                                        <option value="{{data.ModuleID}}" ng-repeat="data in ModulesTableData" class="">
+                                            {{data.ModuleName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    <label class="font-weight-bold"> Card Colour :</label>
+                                    <select class="form-control " ng-model="modulecolour" name="modulecolour" ng-change="changeColour(modulecolour)" required>
+                                        <option value="" selected="selected">Select Colour</option>
+                                        <option value="{{data.ModuleCardColourID}}" ng-repeat="data in ModuleCardColours" class="">
+                                            {{data.ModuleCardColourName}}
+
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"> SubModule Name :</label>
+                                    <input type="text" class="form-control" ng-model="SubModuleName" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"> SubModule Route Name :</label>
+                                    <input type="text" class="form-control" ng-model="SubModuleRouteName" />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <button class="btn btn-sm btn-primary gr-button btn_top pull-left" style="margin-top: 23px!important;" ng-click="AddSubModules()">
+                                        Save
+                                        <span class="fa fa-arrow-up heading_icon btn_icons"></span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="sm-spacer"></div>
+                <div class="col-md-12" style="padding:0px!important">
+                    <div class="cl-details" ng-if="SubModulesTable.length>0">
+                        <h5 class="head_css">Sub Modules</h5>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="SubModulesTable.length>0">
+                        <table class="table table-bordered  table-striped table-rounded">
+                            <thead>
+                                <tr class="cb-1">
+                                    <th class="" style="width: 2%;">S.No</th>
+                                    <th class="text-center">Module Name</th>
+                                    <th class="text-center">Colour</th>
+                                    <th class="text-center">SubModule name</th>
+                                    <th class="text-center">SubModule Route Name</th>
+                                    <th class="text-center">SubModule Order</th>
+                                    <th class="text-center">Active</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in SubModulesTable" ng-click="openDetails(x)">
+
+                                    <td class="text-center">{{$index + 1}}</td>
+                                    <td class="text-center">
+                                        {{data.ModuleName}}
+                                    </td>
+                                    <td class="text-center">{{data.ModuleCardColourID}}</td>
+                                    <td class="text-center">{{data.SubModuleName}}</td>
+                                    <td class="text-center">{{data.SubModuleRouteName}}</td>
+                                    <td class="text-center">{{data.SubModuleOrder}}</td>
+
+
+                                    <td class="text-center">
+                                        <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
+                                        <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-info btn-xs" ng-click="Edit(data.CentreID)">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-xs" ng-click="View(data.CentreID)">
+                                            <i class="fa fa-eye" style="font-size:17px"></i>
+                                        </a>
+                                        <!--<a href="#" class="btn btn-danger btn-lg">
+            <span class="glyphicon glyphicon-trash"></span>
+        </a>-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="width:100%;text-align:center;">
+                        <!--<div class="loadingImg">
+                   <img src="../../contents/img/loading2.gif" ng-show="loading" width="64" />
+                </div>-->
+
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+                <div class="sm-spacer"></div>
+                <div class="sm-spacer"></div>
+            </div>
+
+            <div class="tab-pane" id="4">
+                <div class="card">
+                    <form name="dataForm">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="font-weight-bold"> User Type :</label>
+                                    <select class="form-control " ng-model="userTypeId" id="userTypeId" ng-change="changeUser(userTypeId)" required>
+                                        <option value="" selected="selected">Select Usertype</option>
+                                        <option value="{{data.UserTypeID}}" ng-repeat="data in UserTypes" class="">
+                                            {{data.UserType}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    <label class="font-weight-bold"> Module :</label>
+                                    <select class="form-control " ng-model="ModuleId" id="ModuleId" required ng-change="ChangeModules(ModuleId)">
+                                        <option value="" selected="selected">Select Module</option>
+                                        <option value="{{data.ModuleID}}" ng-repeat="data in ModulesTableData" class="">
+                                            {{data.ModuleName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    <label class="font-weight-bold"> SubModule :</label>
+                                    <select class="form-control " ng-model="SubMod" name="submodule" required>
+                                        <option value="" selected="selected">Select SubModule</option>
+                                        <option value="{{data.SubModuleID}}" ng-repeat="data in SubModulesData" class="">
+                                            {{data.SubModuleName}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <button class="btn btn-sm btn-primary gr-button btn_top pull-left" style="margin-top: 23px!important;" ng-click="AddUserSubModules()">
+                                        Save
+                                        <span class="fa fa-arrow-up heading_icon btn_icons"></span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="sm-spacer"></div>
+                <div class="col-md-12" style="padding:0px!important">
+                    <div class="cl-details" ng-if="GetUserSubModules.length>0">
+                        <h5 class="head_css">User SubModules</h5>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div id="preExamReports" class="table-responsive table-custom-tables-tb col-md-12" ng-if="GetUserSubModules.length>0">
+                        <table class="table table-bordered  table-striped table-rounded">
+                            <thead>
+                                <tr class="cb-1">
+                                    <th class="" style="width: 2%;">S.No</th>
+                                    <th class="text-center">Role</th>
+                                    <th class="text-center">Module Name</th>
+                                    <th class="text-center">SubModule Name</th>
+                                    <th class="text-center">Active</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr style="background-color:#fff!important;cursor:pointer" ng-repeat="data in GetUserSubModules" ng-click="openDetails(x)">
+
+                                    <td class="text-center">{{$index + 1}}</td>
+                                    <td class="text-center">
+                                        {{data.Role}}
+                                    </td>
+                                    <td class="text-center">{{data.ModuleName}}</td>
+                                    <td class="text-center">{{data.SubModuleName}}</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
+                                        <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="" class="btn btn-info btn-xs" ng-click="Edit(data.CentreID)">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-xs" ng-click="View(data.CentreID)">
+                                            <i class="fa fa-eye" style="font-size:17px"></i>
+                                        </a>
+                                        <!--<a href="#" class="btn btn-danger btn-lg">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </a>-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="width:100%;text-align:center;">
+                        <!--<div class="loadingImg">
+                   <img src="../../contents/img/loading2.gif" ng-show="loading" width="64" />
+                </div>-->
+
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+                <div class="sm-spacer"></div>
+                <div class="sm-spacer"></div>
+            </div>
+        </div>
+</div>
+</div>

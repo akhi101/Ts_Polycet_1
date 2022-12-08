@@ -1,0 +1,361 @@
+﻿<style>
+    .selectBox {
+        position: relative;
+    }
+
+        .selectBox select {
+            width: 100%;
+            font-weight: bold;
+        }
+
+    .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    thead > tr > th {
+        position: sticky;
+        top: 0px;
+    }
+
+
+
+
+    .txt_decorate {
+        text-transform: uppercase;
+    }
+
+    #checkboxesdistrict {
+        display: none;
+        border: 1px #dadada solid;
+    }
+
+        #checkboxesdistrict label {
+            display: block;
+        }
+
+            #checkboxesdistrict label:hover {
+                background-color: #1e90ff;
+            }
+
+    #checkboxesmandal label {
+        display: block;
+    }
+
+        #checkboxesmandal label:hover {
+            background-color: #1e90ff;
+        }
+
+    #checkboxesmandal {
+        display: none;
+        border: 1px #dadada solid;
+    }
+
+
+
+    .contain {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        /* margin-bottom: 12px; */
+        /* padding-top: 5px; */
+        cursor: pointer;
+        margin: 5px !important;
+        font-size: 15px !important;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+        /* Hide the browser's default checkbox */
+        .contain input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 22px;
+        width: 22px;
+        background-color: #eee;
+        border: 1px solid #cac6c6;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .contain:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .contain input:checked ~ .checkmark {
+        background-color: #2196F3;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .contain input:checked ~ .checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    .contain .checkmark:after {
+        left: 8px;
+        top: 4px;
+        width: 6px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .contain {
+        font-size: 13px !important;
+    }
+
+
+    element.style {
+    }
+
+    .modal-title {
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
+    .modal-content {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 0.3rem;
+        outline: 0;
+    }
+
+    *, ::after, ::before {
+        box-sizing: border-box;
+    }
+
+    user agent stylesheet
+    div {
+        display: block;
+    }
+
+    /*  .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: 0.5rem;
+        pointer-events: none;
+    }*/
+
+    body {
+        margin: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        text-align: left;
+        background-color: #fff;
+    }
+
+    .modal-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+        border-top-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+    }
+
+    .modal-title {
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+
+    .close:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    .modal-header .close {
+        padding: 1rem;
+        margin: -1rem -1rem -1rem auto;
+    }
+
+    button.close {
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-appearance: none;
+    }
+
+    .close {
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .5;
+    }
+
+    .modal-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding: 1rem;
+        border-top: 1px solid #e9ecef;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-secondary {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+</style>
+<link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">Edit Details</h2>
+        <button type="button" class="close" ng-click="closeModal()" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+        <form>
+            <!--<div style="background-color:#fff!important;" ng-repeat="x in EditDistCordCentresTable" class="ng-scope">-->
+
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">State Name:</label>
+                <select class="form-control" id="State" ng-model="EditData2.StateID" ng-change="GetDistrictsData(EditData2.StateID)"
+                        ng-options="EditData2.StateID as EditData2.StateName for EditData2 in StatesData">
+                    <option value="" selected>Select State</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sel1">
+                    District:
+                </label>
+                <div class="multiselect">
+                    <div class="selectBox" ng-click="showdistrictCheckboxes()">
+                        <select class="form-control">
+                            <option ng-blur="closedistrictCheckbox()">Select District</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxesdistrict" style="max-height: 12em; overflow-y: scroll;">
+                        <label class="contain">
+                            <input type="checkbox" ng-click="toggleAlldistrict()" ng-model="isAllSelecteddistricts" /><span class="checkmark"></span>Select All
+                        </label>
+                        <label class="contain" ng-repeat="data in EditData">
+                            <input type="checkbox" ng-model="data.selected" ng-click="OptionToggledEditDistrict()"><span class="checkmark"></span>{{data.DistrictName}}
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="sel1">
+                    Mandal:
+                </label>
+                <div class="multiselect">
+                    <div class="selectBox" ng-click="showmandalCheckboxes()">
+                        <select class="form-control">
+                            <option ng-blur="closemandalCheckbox()">Select Mandal</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div id="checkboxesmandal" style="max-height: 12em; overflow-y: scroll;">
+                        <label class="contain">
+                            <input type="checkbox" ng-click="toggleAllmandal()" ng-model="isAllSelectedmandals" /><span class="checkmark"></span>Select All
+                        </label>
+                        <label class="contain" ng-repeat="data in EditData1">
+                            <input type="checkbox" ng-model="data.selected" ng-click="optionToggledEditmandal(data.selected)"><span class="checkmark"></span>{{data.MandalName}}
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Coordinator Name:</label>
+                <input type="text" class="form-control" id="recipient-name" ng-model="EditData2.CoordinatorName">
+            </div>
+            <div class="form-group">
+                <label>
+                    Mobile Number:
+                </label>
+                <input class="form-control" type="text" rows="3" placeholder="Enter Mobile Number" maxlength="10" minlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" ng-model="EditData2.CoordinatorMobile">
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label"> Email:</label>
+                <input type="text" class="form-control" id="recipient-name" ng-model="EditData2.CoordinatorEmail">
+            </div>
+
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Centre Code Name:</label>
+                <input type="text" class="form-control" id="recipient-name" ng-model="EditData2.CentreCodeName">
+            </div>
+
+
+
+            <!--<div class="col-md-1">
+        <label for="checkbox" class="col-form-label">Active:</label>
+        <input type="checkbox" ng-model="EditData.Active" />
+    </div>-->
+            <!--</div>-->
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="UpdateDetails(EditData,EditData1,EditData2)">Update</button>
+        <button type="button" class="btn btn-secondary" ng-click="closeModal()">Cancel</button>
+    </div>
+</div>
+
