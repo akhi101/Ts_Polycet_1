@@ -1,0 +1,145 @@
+11/10/2022 9:19:08 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 9:19:08 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 11:45:45 AM
+Procedure or function 'SP_Get_RegistrationMobileOTP' expects parameter '@CandidateMobile', which was not supplied.
+
+11/10/2022 11:47:20 AM
+Procedure or function 'SP_Get_RegistrationMobileOTP' expects parameter '@CandidateMobile', which was not supplied.
+
+11/10/2022 5:18:26 PM
+Procedure or function 'SP_Verify_RegistrationMobileOTP' expects parameter '@MobileOTP', which was not supplied.
+
+11/10/2022 5:30:07 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:37:14 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:48:26 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 5:48:26 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 5:49:20 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:50:09 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:50:29 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:51:38 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:54:08 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:56:58 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 5:59:34 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 6:02:45 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 6:07:01 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 6:15:01 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:15:01 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:17:34 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 6:18:28 PM
+Cannot insert the value NULL into column 'ApplicationNumber', table 'PolycetDb.dbo.Registrations'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+11/10/2022 6:39:49 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:39:49 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:40:09 PM
+Procedure or function 'SP_Verify_RegistrationMobileOTP' expects parameter '@CandidateMobile', which was not supplied.
+
+11/10/2022 6:41:36 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/10/2022 6:41:39 PM
+A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The network connection was aborted by the local system.)
+
+11/10/2022 6:41:41 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/10/2022 6:41:42 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/10/2022 6:41:43 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/10/2022 6:41:43 PM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+11/10/2022 6:41:46 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:41:46 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:41:46 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:41:46 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:41:46 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:41:46 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:41:46 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:43:55 PM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+11/10/2022 6:45:27 PM
+Procedure or function 'SP_Verify_RegistrationMobileOTP' expects parameter '@MobileOTP', which was not supplied.
+
+11/10/2022 6:46:29 PM
+Procedure or function 'SP_Verify_RegistrationMobileOTP' expects parameter '@MobileOTP', which was not supplied.
+
+11/10/2022 6:49:35 PM
+Procedure or function 'SP_Verify_RegistrationMobileOTP' expects parameter '@MobileOTP', which was not supplied.
+
+10-11-2022 22:46:55
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+10-11-2022 22:46:55
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+

@@ -1,0 +1,464 @@
+﻿<style>
+    legend {
+        display: block;
+        width: auto;
+        padding: 0;
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: inherit;
+        color: #333;
+        border: 0 !important;
+        /* border-bottom: 1px solid #e5e5e5; */
+    }
+
+    element.style {
+    }
+
+    fieldset {
+        /* min-width: 0; */
+        /* padding: 0; */
+        /* margin: 0; */
+        /* border: 0; */
+    }
+
+    fieldset {
+        /* padding: 0.35em 0.625em 0.75em; */
+        /* margin: 0 2px; */
+        /* border: 1px solid silver; */
+    }
+
+    * {
+        /* padding: 0; */
+        /* margin: 0; */
+    }
+
+    * {
+        /* -webkit-box-sizing: border-box; */
+        -moz-box-sizing: border-box;
+        /* box-sizing: border-box; */
+    }
+
+    fieldset {
+        display: block;
+        margin-inline-start: 2px;
+        margin-inline-end: 2px;
+        padding-block-start: 0.35em;
+        padding-inline-start: 0.75em;
+        padding-inline-end: 0.75em;
+        padding-block-end: 0.625em;
+        min-inline-size: min-content;
+        border-width: 2px;
+        border-style: groove;
+        border-color: rgb(192, 192, 192);
+        border-image: initial;
+        border-radius: 10px;
+        margin: 20px 0px;
+    }
+
+    form.white-popup-block label {
+        float: left;
+        color: #1F497D;
+        font-weight: bold;
+    }
+
+    .sub_btn {
+        margin-top: 35px !important;
+    }
+</style>
+<div ng-controller="ApplicationController">
+    <div class="bg-gray-hard">
+        <div class="sm-spacer"></div>
+        <!-- Start Login
+        ============================================= -->
+        <div class="login-area default-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <form  id="register-form" class="white-popup-block">
+                            <div class="login-custom">
+                                <h4> Application</h4>
+                                <fieldset>
+                                    <legend>SSC Details</legend>
+
+                                    <div class="col-md-3">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label> SSC Type </label>
+                                                <input class="form-control" placeholder="SSC Type" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label> SSC Hallticket Number </label>
+                                                <input class="form-control" placeholder="SSC Hallticket Number" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label> SSC Appearing Year </label>
+                                                <input class="form-control" placeholder="SSC Appearing Year" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn sub_btn btn-xs btn-success btn_margin">
+                                                Get Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Personal Details</legend>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label> Name </label>
+                                                <input class="form-control" placeholder="Name" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Father Name </label>
+                                                <input class="form-control" placeholder="Father Name" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Mother Name </label>
+                                                <input class="form-control" placeholder="Mother Name" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Gender </label>
+                                                <input class="form-control" placeholder="Gender" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Date of Birth </label>
+                                                <input class="form-control" placeholder="Date of Birth" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Communication Details</legend>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Registered Mobile Number </label>
+                                                <input class="form-control" placeholder="Registered Mobile Number" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Alternate Mobile Number </label>
+                                                <input class="form-control" placeholder="Alternate Mobile Number" type="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Address </label>
+                                                <input class="form-control" placeholder="Address" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Address1 </label>
+                                                <input class="form-control" placeholder="Address1" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+                                            <label>District </label>
+                                            <input class="form-control" placeholder="District*" type="text">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+                                            <label>Mandal </label>
+                                            <input class="form-control" placeholder="Mandal" type="text">
+                                        </div>
+
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Category Details</legend>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Caste </label>
+                                                <input class="form-control" placeholder="Caste" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Caste Certificate Number</label>
+                                                <input class="form-control" placeholder="Caste Certificate Number" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn sub_btn btn-xs btn-success btn_margin">
+                                                Get Details
+                                            </button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Special Category Details</legend>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Region</label>
+                                                <input class="form-control" placeholder="Region" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Physically Handicaped</label>
+                                                <input class="form-control" placeholder="Physically Handicaped" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>NCC</label>
+                                                <input class="form-control" placeholder="NCC" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Sports & Games</label>
+                                                <input class="form-control" placeholder="Sports & Games" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>CAP</label>
+                                                <input class="form-control" placeholder="CAP" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="" style=" visibility: hidden;">
+                                            <div class="form-group">
+                                                <label>Sports & Games</label>
+                                                <input class="form-control" placeholder="Sports & Games" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Appear for Biology</label>
+                                                <input class="form-control" placeholder="Biology" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Assistance in Urdu</label>
+                                                <input class="form-control" placeholder="Urdu" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--<div class="col-md-4">
+            <div class="">
+                <label></label>
+                <button type="submit" class="btn sub_btn btn-xs btn-success  btn_margin">
+                    Submit
+                </button>
+            </div>
+        </div>-->
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Exam Center Details</legend>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>District</label>
+                                                <input class="form-control" placeholder="District" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Mandal</label>
+                                                <input class="form-control" placeholder="Mandal" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Examination Center</label>
+                                                <input class="form-control" placeholder="Examination Center" type="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Study Details</legend>
+                                    <div class="col-md-12">
+                                        <table class="table table-bordered table-striped">
+                                            <tr>
+                                                <th>S.No</th>
+                                                <th>Class Studied</th>
+                                                <th>Year Passed</th>
+                                                <th>District Studied</th>
+                                                <th>Place Studied</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                                <td><input class="form-control" /></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Photo & Signature</legend>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Photo</label>
+                                                <input class="form-control" accept="image/*" type="file">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <div class="form-group">
+                                                <label>Signature</label>
+                                                <input class="form-control" accept="image/*" type="file">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <label></label>
+                                        <button type="submit" style="margin:20px!important;" class="btn sub_btn btn-xs btn-success pull-right btn_margin">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Login Area -->
+    </div>
+</div>
