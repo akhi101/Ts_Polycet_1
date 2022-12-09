@@ -42,32 +42,7 @@
         padding: 2px 16px;
     }
 </style>
-<script type="text/javascript">
-    // When the document is ready
-    $(document).ready(function () {
 
-        $('#example1').datepicker({
-            minViewMode: 'years',
-            autoclose: true,
-            format: 'yyyy'
-        });
-        $('#example2').datepicker({
-            minViewMode: 1,
-            autoclose: true,
-            format: 'mm-yyyy'
-        });
-        $('.tabledate').datepicker({
-            //minViewMode: 1,
-            autoclose: true,
-            format: 'dd-mm-yyyy'
-        });
-        //$('#example4').datepicker({
-        //    //minViewMode: 1,
-        //    autoclose: true,
-        //    //format: 'dd-mm-yyyy'
-        //});
-    });
-</script>
 <div ng-controller="RecentNewsController">
     <script type="text/javascript">
         // When the document is ready
@@ -123,25 +98,29 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-md-4">
-
-                        <label for="date-picker-example">Start Date(dd/mm/yyyy):</label>
-                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
-                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker1" placeholder="Please Enter StartDate" autocomplete="off" name="StartDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="StartDate" is-open="showFlag1" required />
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-primary" ng-click="showFlag1 = true"><i class="fa fa-calendar"></i></button>
-                            </span>
-                        </p>
+                    <div class="col-md-4">
+                        <div class="form-group required">
+                            <label for="date-picker-example">Start Date(dd/mm/yyyy):</label>
+                            <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                                <input type="text" show-weeks="false" class="form-control" id="datetimepicker1" placeholder="Please Enter StartDate" autocomplete="off" name="StartDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="StartDate" is-open="showFlag1" required />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-primary" ng-click="showFlag1 = true"><i class="fa fa-calendar"></i></button>
+                                </span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label for="date-picker-example">End Date(dd/mm/yyyy):</label>
-                        <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
-                            <input type="text" show-weeks="false" class="form-control" id="datetimepicker2" placeholder="Please Enter EndDate" autocomplete="off" name="EndDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="EndDate" is-open="showFlag2" required />
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-primary" ng-click="showFlag2 = true"><i class="fa fa-calendar"></i></button>
-                            </span>
-                        </p>
+                    <div class="col-md-4">
+                        <div class="form-group required">
+                            <label for="date-picker-example">End Date(dd/mm/yyyy):</label>
+                            <p class="input-group" style="margin-top: unset; margin-bottom: unset;margin-left: 0 ;margin-right: 0;padding-left: 0px;">
+                                <input type="text" show-weeks="false" class="form-control" id="datetimepicker2" placeholder="Please Enter EndDate" autocomplete="off" name="EndDate" pattern="^(\d{1,2})\/(\d{1,2})\/(\d{4})$" datetime-picker="dd/MM/yyyy" ng-model="EndDate" is-open="showFlag2" required />
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-primary" ng-click="showFlag2 = true"><i class="fa fa-calendar"></i></button>
+                                </span>
+                            </p>
+                        </div>
                     </div>
+                 
                     <div class="col-md-2">
                         <div class="">
                             <button type="submit" class="btn  btn-primary btn_top_margin  pull-left" ng-click="AddRecentNews()">Submit<span class="fa fa-arrow-up heading_icon btn_icons"></span></button>
@@ -178,8 +157,8 @@
                             <td class="text-center">
                                 {{data.RecentNewsText}}
                             </td>
-                            <td class="text-center">{{data.FromDate | date: "dd-MM-yyyy"}}</td>
-                            <td class="text-center">{{data.ToDate | date: "dd-MM-yyyy"}}</td>
+                            <td class="text-center">{{data.FromDate}}</td>
+                            <td class="text-center">{{data.ToDate}}</td>
                             <td class="text-center">
                                 <button class="btn btn-success btn-xs" ng-show="data.Active == true">Yes</button>
                                 <button class="btn btn-danger btn-xs" ng-show="data.Active == false">No</button>

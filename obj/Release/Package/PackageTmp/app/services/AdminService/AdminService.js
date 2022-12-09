@@ -1,5 +1,9 @@
 ﻿define(['app'], function (app) {
     app.service("AdminService", function (DataAccessService) {
+        this.GetCurrentPolycetYear = function () {
+            return DataAccessService.getDataAll('api/AdminService/GetCurrentPolycetYear');
+        };
+
         this.GetStates = function () {
             return DataAccessService.getDataAll('api/AdminService/GetStates');
         };
@@ -12,16 +16,47 @@
             return DataAccessService.getDataAll('api/AdminService/GetRecentNews');
         };
 
-        //this.AddRecentNews = function (RecentNewsText, FromDate, ToDate,Active, UserName) {
-        //    var paramObj = { "RecentNewsText": RecentNewsText, "FromDate": FromDate, "ToDate": ToDate, "Active": Active, "UserName": UserName };
-        //    var promise = DataAccessService.getDataWithPara('api/AdminService/AddRecentNews', paramObj);
-        //    return promise;
-        //}
+        this.AddRecentNews = function (RecentNewsText, FromDate, ToDate, UserName) {
+            var paramObj = { "RecentNewsText": RecentNewsText, "FromDate": FromDate, "ToDate": ToDate, "UserName": UserName };
+            var promise = DataAccessService.getDataWithPara('api/AdminService/AddRecentNews', paramObj);
+            return promise;
+        }
 
-        this.AddRecentNews = function (paramObject) {
+        //this.AddRecentNews = function (paramObject) {
 
-            return DataAccessService.postData('api/AdminService/AddRecentNews', paramObject);
+        //    return DataAccessService.postData('api/AdminService/AddRecentNews', paramObject);
+        //};
+
+        //this.AddRegistrationDates = function (paramObject) {
+
+        //    return DataAccessService.postData('api/AdminService/AddRegistrationDates', paramObject);
+        //};
+
+
+        this.AddRegistrationDates = function (PolycetYearID, RegistrationStartDate, RegistrationEndDate, ApplicationStartDate, ApplicationEndDate, UserName) {
+            var paramObj = {
+                "PolycetYearID": PolycetYearID, "RegistrationStartDate": RegistrationStartDate,
+                "RegistrationEndDate": RegistrationEndDate, "ApplicationStartDate": ApplicationStartDate,
+                "ApplicationEndDate": ApplicationEndDate, "UserName": UserName
+            };
+            var promise = DataAccessService.getDataWithPara('api/AdminService/AddRegistrationDates', paramObj);
+            return promise;
+        }
+
+        this.GetRegistrationDates = function (PolycetYearID) {
+            var paramObject = { "PolycetYearID": PolycetYearID };
+            return DataAccessService.getDataWithPara('api/AdminService/GetRegistrationDates', paramObject);
         };
+
+        this.UpdateRegistrationDates = function (PolycetYearID, RegistrationStartDate, RegistrationEndDate, ApplicationStartDate, ApplicationEndDate,Active, UserName) {
+            var paramObj = {
+                "PolycetYearID": PolycetYearID, "RegistrationStartDate": RegistrationStartDate,
+                "RegistrationEndDate": RegistrationEndDate, "ApplicationStartDate": ApplicationStartDate,
+                "ApplicationEndDate": ApplicationEndDate, "Active": Active, "UserName": UserName
+            };
+            var promise = DataAccessService.getDataWithPara('api/AdminService/UpdateRegistrationDates', paramObj);
+            return promise;
+        }
 
         this.GetEditRecentNews = function (RecentNewsID) {
             var paramObject = { "RecentNewsID": RecentNewsID };

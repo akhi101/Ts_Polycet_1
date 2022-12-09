@@ -1,0 +1,94 @@
+12/9/2022 12:25:20 AM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/9/2022 12:25:20 AM
+Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached.
+
+12/9/2022 12:25:36 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:36 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:36 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:36 AM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/9/2022 12:25:36 AM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/9/2022 12:25:37 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:37 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:37 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:37 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:37 AM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/9/2022 12:25:37 AM
+A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+12/9/2022 12:25:37 AM
+ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+12/9/2022 12:27:08 AM
+Invalid object name 'Registrations'.
+
+12/9/2022 12:27:08 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/9/2022 12:27:25 AM
+Invalid object name 'Registrations'.
+
+12/9/2022 12:27:25 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/9/2022 12:27:56 AM
+Invalid object name 'Registrations'.
+
+12/9/2022 12:27:57 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/9/2022 12:37:56 AM
+Invalid column name 'RegistrationFeesPaid'.
+
+12/9/2022 12:37:56 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/9/2022 12:42:35 AM
+String or binary data would be truncated.
+The statement has been terminated.
+
+12/9/2022 12:42:35 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/9/2022 12:47:20 AM
+String or binary data would be truncated.
+The statement has been terminated.
+
+12/9/2022 12:47:20 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/9/2022 12:51:37 AM
+String or binary data would be truncated.
+The statement has been terminated.
+
+12/9/2022 12:51:37 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
+12/9/2022 12:54:28 AM
+String or binary data would be truncated.
+The statement has been terminated.
+
+12/9/2022 12:54:28 AM
+Could not find stored procedure 'USP_SET_ErrorLog'.
+
